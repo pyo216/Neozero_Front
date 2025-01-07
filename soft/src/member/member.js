@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';  // ページ遷移用フック
 import '../member/member.css';  // cssファイル
 
-const Member = () => {
+const MemberPage = () => {
     const navigate = useNavigate(); // ページ遷移用のフック
 
     return (
@@ -37,4 +37,4 @@ const Member = () => {
     );
 };
 
-export default Member;
+export default MemberPage;
