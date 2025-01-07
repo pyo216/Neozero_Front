@@ -22,6 +22,16 @@
 
 ◯ git restore <ファイル名>
 
+3. gitの状態確認
+
+◯ git status
+
+→ Changes to be committed(変更後にgit addしたファイル)
+
+→ Changes not staged for commit(変更後にgit addしていないファイル)
+
+→ Untracked files(Gitの管理下にないファイル)
+
 
 ・CSSの順番
 
