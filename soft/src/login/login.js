@@ -30,8 +30,6 @@ const LoginPage = () => {
             type="email"
             id="email"
             placeholder="メールアドレスを入力してください"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
             required
           />
         </div>
@@ -42,13 +40,11 @@ const LoginPage = () => {
             type="password"
             id="password"
             placeholder="パスワードを入力してください"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
             required
           />
         </div>
 
-        <p className={styles.errorMessage}>{errorMessage}</p>  
+        <p className={styles.errorMessage}></p>  
 
         <button // 「ログイン」ボタン
           type="button"
