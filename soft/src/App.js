@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LoginPage from './login/LoginPage';  // ログインページ
+import LoginPage from './login/loginPage';  // ログインページ
 import TopPage from './top/top';  // トップページ
 import MyPage from'./mypage/mypage'; //マイページ
-import Member from'./member/member'; //会員情報選択
+import MemberPage from'./member/member'; //会員情報選択
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} /> {/* ログインページ */}
           <Route path="/top" element={<TopPage />} /> {/* トップページ */}
           <Route path="/mypage" element={<MyPage />} /> {/*マイページ */}
-          <Route path="/member" element={<Member />} /> {/*会員情報選択*/}
+          <Route path="/member" element={<MemberPage />} /> {/*会員情報選択*/}
         </Routes>
       </div>
     </Router>
