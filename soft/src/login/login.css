@@ -1,0 +1,107 @@
+/* ユーザのログインページのCSS */
+body {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* 画面の高さ全体を使用 */
+    margin: 0; /* デフォルトのマージンを削除 */
+    padding: 20px; /* 全体に余白を追加 */
+}
+
+.login {
+    background-color: #FFD5EC;
+    width: 90%; /* モバイルではより広く */
+    max-width: 800px; /* デスクトップでの最大幅を設定 */
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    border-radius: 8px; /* 角を少し丸く */
+}
+
+#pawlovers-img {
+    width: 90%;
+    max-width: 600px; /* デスクトップでの最大幅を設定 */
+    margin-bottom: 20px;
+}
+
+#item {
+    width: 90%;
+    max-width: 500px; /* デスクトップでの最大幅を設定 */
+    margin-bottom: 10px;
+}
+
+::placeholder {
+    text-align: center;
+}
+
+input {
+    width: 90%;
+    max-width: 500px; /* デスクトップでの最大幅を設定 */
+    height: 40px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px; /* 読みやすいフォントサイズ */
+}
+
+button {
+    width: 80%;
+    max-width: 300px; /* デスクトップでの最大幅を設定 */
+    height: 50px;
+    border-radius: 20px;
+    background: #b09bd1;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #b09bd1;;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background: #9584bc; /* ホバー時の色を少し暗く */
+}
+
+#login {
+    margin-bottom: 20px;
+}
+
+#registr {
+    display: flex;
+    justify-content: center;
+}
+
+hr {
+    border: none;
+    border-top-style: dashed;
+    border-top-width: 1px;
+    width: 90%;
+    max-width: 600px; /* デスクトップでの最大幅を設定 */
+    border-top-color: #000000;
+}
+
+/* デスクトップ向けのメディアクエリ */
+@media screen and (min-width: 1024px) {
+    .login {
+        width: 70%;
+        padding: 40px;
+    }
+
+    input, #item {
+        width: 70%;
+    }
+
+    button {
+        width: 25%;
+        min-width: 200px;
+    }
+}
+
+/* 大画面デスクトップ向けの追加調整 */
+@media screen and (min-width: 1440px) {
+    .login {
+        width: 60%;
+    }
+}
