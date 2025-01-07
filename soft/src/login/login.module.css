@@ -1,107 +1,79 @@
-/* ユーザのログインページのCSS */
-body {
-    background-color: #ffffff;
+.body {
+    min-height: 100vh; /* 高さ指定 */
+    text-align: center; /* 中央揃え */
+    font-size: medium; /* 文字の大きさ */
+    background: #fff; /* 背景色 */
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh; /* 画面の高さ全体を使用 */
-    margin: 0; /* デフォルトのマージンを削除 */
-    padding: 20px; /* 全体に余白を追加 */
+    flex-flow: column; /* 縦並び */
+    align-items: center; /* 上下中央寄せ */
+    justify-content: center; /* 左右中央寄せ */
+}
+
+.pawloversImg {
+    width: 50%;
 }
 
 .login {
-    background-color: #FFD5EC;
-    width: 90%; /* モバイルではより広く */
-    max-width: 800px; /* デスクトップでの最大幅を設定 */
-    margin: 20px auto;
+    width: 50%;
+    border-radius: 10px; /* 丸み */
+    background: #FFD5EC; /* 背景色 */
+    padding: 20px; /* 上下左右の余白(内側) */
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 20px;
-    border-radius: 8px; /* 角を少し丸く */
+    flex-flow: column; /* 縦並び */
+    align-items: center; /* 上下中央寄せ */
+    justify-content: center; /* 左右中央寄せ */
 }
 
-#pawlovers-img {
-    width: 90%;
-    max-width: 600px; /* デスクトップでの最大幅を設定 */
-    margin-bottom: 20px;
+.formGroup {
+    width: 70%;
+    margin-bottom: 20px; /* 下の余白(外側) */
+    display: flex;
+    flex-flow: column; /* 縦並び */
+    align-items: center; /* 上下中央寄せ */
+    justify-content: center; /* 左右中央寄せ */
 }
 
-#item {
-    width: 90%;
-    max-width: 500px; /* デスクトップでの最大幅を設定 */
-    margin-bottom: 10px;
+.formGroup label {
+    color: #000; /* 文字の色 */
+    margin-top: 10px; /* 上の余白(外側) */
+    margin-right: auto; /* 右の余白(外側) */
 }
 
-::placeholder {
-    text-align: center;
-}
-
-input {
-    width: 90%;
-    max-width: 500px; /* デスクトップでの最大幅を設定 */
+.formGroup input {
     height: 40px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px; /* 読みやすいフォントサイズ */
+    width: 100%;
+    font-size: large; /* 文字の大きさ */
+    border: 1px solid #ccc; /* 枠線 */
+    border-radius: 5px; /* 丸み */
+    padding: 5px; /* 上下左右の余白(内側) */
 }
 
-button {
-    width: 80%;
-    max-width: 300px; /* デスクトップでの最大幅を設定 */
+.formGroup input::placeholder {
+    text-align: center; /* 中央揃え */
+}
+
+.errorMessage {
+    height: 20px;
+    color: red; /* 文字の色 */
+}
+
+.new {
+    height: 20px;
+    color: #000; /* 文字の色 */
+}
+
+.loginButton, .registerButton {
     height: 50px;
-    border-radius: 20px;
-    background: #b09bd1;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    color: #b09bd1;;
-    transition: background-color 0.3s;
+    width: 50%;
+    font-size: large; /* 文字の大きさ */
+    border: none; /* 枠線削除 */
+    border-radius: 30px; /* 丸み */
+    color: #000; /* 文字の色 */
+    background: #b09bd1; /* 背景色 */
+    margin: 5px; /* 上下左右の余白(外側) */
+    cursor: pointer; /* カーソル変更 */
 }
 
-button:hover {
-    background: #9584bc; /* ホバー時の色を少し暗く */
-}
-
-#login {
-    margin-bottom: 20px;
-}
-
-#registr {
-    display: flex;
-    justify-content: center;
-}
-
-hr {
-    border: none;
-    border-top-style: dashed;
-    border-top-width: 1px;
-    width: 90%;
-    max-width: 600px; /* デスクトップでの最大幅を設定 */
-    border-top-color: #000000;
-}
-
-/* デスクトップ向けのメディアクエリ */
-@media screen and (min-width: 1024px) {
-    .login {
-        width: 70%;
-        padding: 40px;
-    }
-
-    input, #item {
-        width: 70%;
-    }
-
-    button {
-        width: 25%;
-        min-width: 200px;
-    }
-}
-
-/* 大画面デスクトップ向けの追加調整 */
-@media screen and (min-width: 1440px) {
-    .login {
-        width: 60%;
-    }
+.loginButton:hover, .registerButton:hover {
+    background: #9a88c7;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LoginPage from './login/loginPage';  // ログインページ
+import LoginPage from './login/login';  // ログインページ
 import TopPage from './top/top';  // トップページ
 import MyPage from'./mypage/mypage'; //マイページ
 import MemberPage from'./member/member'; //会員情報選択

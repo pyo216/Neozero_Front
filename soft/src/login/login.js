@@ -1,73 +1,77 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom'; // navigateを使うためにインポート
-import '../login/login.css';
-import pawloversImg from './pawlovers-side.jpg'; // ローカル画像を読み込み
+import React from 'react'; // React用
+import { useNavigate } from 'react-router-dom'; // ページ遷移用
+import styles from './login.module.css'; // CSSモジュール
+import pawloversImg from './pawlovers-side.jpg'; // PawLovers画像
 
 const LoginPage = () => {
-  const navigate = useNavigate(); // useNavigateフックを使ってページ遷移を設定
+  const navigate = useNavigate(); // ページ遷移用
 
-  const handleLogin = () => {
-    // ログイン後の遷移
-    navigate('/top'); // ここでトップページに移動
+  const handleLogin = () => { // 「ログイン」ボタン押下
+    navigate('/top'); // トップページに移動
   };
 
-  const handleRegister = () => {
-    // 新規登録ページへの遷移
-    navigate('/top'); // ここでトップページに移動（仮のページとしてトップに遷移）
+  const handleRegister = () => { //「新規会員登録」ボタン押下
+    navigate('/terms'); // 新規会員登録ページに移動
   };
+
   return (
-    <>
+    <div className={styles.body}>
       <img
-        src={pawloversImg} // インポートした画像を使用
-        alt="pawlovers logo"
-        id="pawlovers-img"
+        src={pawloversImg} // PawLovers画像
+        alt="pawloversImg" // 代替テキスト
+        className={styles.pawloversImg}
       />
-      
-      <form 
-        className="login"
-        onSubmit={handleLogin}
-      >
-        <p>&nbsp;</p>
-        <label id="item" htmlFor="email">
-          メールアドレス
-        </label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="メールアドレスを入力してください"
-          required
-        />
-        
-        <label id="item" htmlFor="password">
-          パスワード
-        </label>
-        <input
-          type="password"
-          id="login"
-          name="password"
-          placeholder="パスワードを入力してください"
-          required
-        />
 
-        <button type="submit">
+      <form className={styles.login}>
+
+        <div className={styles.formGroup}>
+          <label htmlFor="email">メールアドレス</label>
+          <input // メールアドレス入力欄
+            type="email"
+            id="email"
+            placeholder="メールアドレスを入力してください"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </div>
+
+        <div className={styles.formGroup}>
+          <label htmlFor="password">パスワード</label>
+          <input // パスワード入力欄
+            type="password"
+            id="password"
+            placeholder="パスワードを入力してください"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
+
+        <p className={styles.errorMessage}>{errorMessage}</p>  
+
+        <button // 「ログイン」ボタン
+          type="button"
+          onClick={handleLogin}
+          className={styles.loginButton}
+        >
           ログイン
         </button>
-      </form>
 
-      <form 
-        className="login"
-        onSubmit={handleRegister}
-      >
-        <p>・・・・・・・・初めての方はこちら・・・・・・・・・</p>
-        <button type="submit">
+        <p className={styles.new}>・・・・・・・・・・・・・・・・・初めての方はこちら・・・・・・・・・・・・・・・・・・</p>
+
+        <button //「新規会員登録」ボタン
+          type="button"
+          onClick={handleRegister}
+          className={styles.registerButton}
+        >
           新規会員登録
         </button>
-        <p>&nbsp;</p>
+
       </form>
-    </>
+
+    </div>
   );
 };
 
 export default LoginPage;
-  
