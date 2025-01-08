@@ -10,5 +10,5 @@ const Terms = () => {
 return (
       <div>広告</div>
     );
-
+};
 export default Terms;
