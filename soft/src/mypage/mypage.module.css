@@ -50,40 +50,35 @@
     width: 90%;
     background: #fff; /* 背景色 */
     padding: 35px 0; /* 上下左右の余白(内側) */
-    margin: 0 auto; /* 上下左右の余白(外側) */
 }
 
 .center {
     flex: 3;
     display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;
-    text-align: center;
+    flex-flow: column; /* 縦並び */
+    align-items: center; /* 上下中央寄せ */
+    justify-content: center; /* 左右中央寄せ */
 }
 
 .title {
-    text-align: center;
-    margin: 40px auto;
-    border-radius: 30px;
-    padding: 10px 0;
     width: 50%;
-    border: solid 1px;
-    font-size: xx-large;
+    font-size: xx-large; /* 文字の大きさ */ 
+    border-radius: 30px; /* 丸み */
+    color: #FFD5EC; /* 文字の色 */
     background: #fff; /* 背景色 */
-    color: #FFD5EC;
+    padding: 10px 0; /* 上下左右の余白(内側) */         
+    margin: 40px auto; /* 上下左右の余白(外側) */         
 }
 
 .media {
-    width: 90%; 
     height: 650px;
-    border: 1px solid;
+    width: 90%; 
+    border: 1px solid #000; /* 枠線 */ 
 }
 
 .advertisement {
-    width: 90%; 
     height: 750px;
-    margin-top: 20px;    
-    text-align: center;
-    border: 1px solid;
+    width: 90%;   
+    border: 1px solid #000; /* 枠線 */ 
+    margin-top: 20px; /* 上の余白(外側) */       
 }
