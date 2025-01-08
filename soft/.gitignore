@@ -1,5 +1,7 @@
 # Node modules cache
 ../../node_modules/ 
+node_modules/.cache/babel-loader/
+
 
 # Environment variables 
 .env
