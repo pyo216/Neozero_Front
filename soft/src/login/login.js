@@ -70,7 +70,7 @@ const LoginPage = () => {
           ログイン
         </button>
 
-        <p className={styles.new}>・・・・・・・・・・・・・・・・・初めての方はこちら・・・・・・・・・・・・・・・・・・</p>
+        <p className={styles.new}>・・・・・・・・・・・・初めての方はこちら・・・・・・・・・・・・</p>
 
         <button
           type="button"
