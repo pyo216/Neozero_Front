@@ -54,7 +54,7 @@ const LoginPage = () => {
           ログイン
         </button>
 
-        <p className={styles.new}>・・・・・・・・・・・・・・・・・初めての方はこちら・・・・・・・・・・・・・・・・・・</p>
+        <p className={styles.new}>・・・・・・・・・・・初めての方はこちら・・・・・・・・・・・・</p>
 
         <button //「新規会員登録」ボタン
           type="button"
