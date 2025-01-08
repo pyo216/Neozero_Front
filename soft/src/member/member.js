@@ -33,7 +33,7 @@ const MemberPage = () => {
           トップページへ戻る
         </button>
 
-        <div lassName={styles.advertisement}>広告</div>
+        <div className={styles.advertisement}>広告</div>
 
       </div>
 
