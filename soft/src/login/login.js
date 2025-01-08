@@ -44,7 +44,7 @@ const LoginPage = () => {
           />
         </div>
 
-        <p className={styles.errorMessage}></p>  
+        <p className={styles.errorMessage}></p>
 
         <button // 「ログイン」ボタン
           type="button"
