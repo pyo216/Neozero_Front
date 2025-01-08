@@ -1,40 +1,74 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';  // ページ遷移用フック
-import '../member/member.css';  // cssファイル
+import React from 'react'; // React用
+import { useNavigate } from 'react-router-dom'; // ページ遷移用
+import styles from './member.module.css'; // CSSモジュール
 
 const MemberPage = () => {
-    const navigate = useNavigate(); // ページ遷移用のフック
+  const navigate = useNavigate(); // ページ遷移用のフック
 
-    return (
-        <div className="member-container">
-            {/* 左側のメニュー */}
-            <div className="left">
-                <button className="menu" onClick={() => navigate('/top')}>
-                    トップページに戻る
-              </button>
-                {/*<div id="advertisement">広告</div> */}
-            </div> 
+  const handleTop = () => { // 「トップページに戻る」ボタン押下
+    navigate('/top'); // トップページに移動
+  };
 
-            {/* 会員情報選択エリア */}
-            <div className="center">
-                <div id="member">会員情報選択</div>
-                <button className="menu" onClick={() => navigate('/change')}>
-                    会員情報変更
-                </button>
-                <button className="important" onClick={() => navigate('/logout')}>
-                    ログアウト
-                </button>
-                <button className="important" onClick={() => navigate('/account')}>
-                    アカウント消去
-                </button>
-            </div>
+  const handleChange = () => { // 「会員情報変更」ボタン押下
+    navigate('/change'); // 会員情報変更画面に移動
+  };
 
-            {/* 右側の広告エリア */}
-            <div className="right">
-                <div id="advertisement2">広告</div>
-            </div>
-        </div>
-    );
+  const handleLogout = () => { // 「ログアウト」ボタン押下
+    navigate('/logout'); // ログアウト画面に移動
+  };
+
+  const handleAccount = () => { // 「アカウント消去」ボタン押下
+    navigate('/account'); // アカウント消去画面に移動
+  };
+
+  return (
+    <div className={styles.body}>
+
+      <div className={styles.left}>
+
+        <button // 「トップページへ戻る」ボタン
+          className={styles.topButton}
+          onClick={handleTop}
+        >
+          トップページへ戻る
+        </button>
+
+        <div lassName={styles.advertisement}>広告</div>
+
+      </div>
+
+      <div className={styles.center}>
+
+        <div className={styles.title}>会員情報選択</div>
+
+        <button // 「会員情報変更」ボタン
+          className={styles.changeButton}
+          onClick={handleChange}
+        >
+          会員情報変更
+        </button>
+
+        <button // 「ログアウト」ボタン
+          className={styles.logoutButton}
+          onClick={handleLogout}
+        >
+          ログアウト
+        </button>
+
+        <button // 「アカウント消去」ボタン
+          className={styles.accountButton}
+          onClick={handleAccount}
+        >
+          アカウント消去
+        </button>
+
+      </div>
+
+      <div className={styles.right}>
+        <div className={styles.advertisement2}>広告</div>
+      </div>
+    </div>
+  );
 };
 
 export default MemberPage;
