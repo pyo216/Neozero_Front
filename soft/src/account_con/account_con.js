@@ -10,6 +10,7 @@ const AccountCon = () => {
 
 
   return (
+      <div>広告</div>
     );
 };
 
