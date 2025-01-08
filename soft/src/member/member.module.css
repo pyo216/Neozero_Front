@@ -1,4 +1,6 @@
 .body {
+    min-height: 100vh; /* 高さ指定 */
+    text-align: center; /* 中央揃え */
     background-color: #FFD5EC;
     display: flex;
     justify-content: center;
