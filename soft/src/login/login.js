@@ -60,11 +60,7 @@ const LoginPage = () => {
           />
         </div>
 
-<<<<<<< HEAD
-        <p className={styles.errorMessage}></p>
-=======
         {errorMessage && <p className={styles.errorMessage}>{errorMessage}</p>}
->>>>>>> 77273836 (ページファイルだけ作った)
 
         <button
           type="button"
@@ -74,7 +70,7 @@ const LoginPage = () => {
           ログイン
         </button>
 
-        <p className={styles.new}>・・・・・・・・・・・初めての方はこちら・・・・・・・・・・・・</p>
+        <p className={styles.new}>・・・・・・・・・・・・・・・・・初めての方はこちら・・・・・・・・・・・・・・・・・・</p>
 
         <button
           type="button"
