@@ -1,0 +1,58 @@
+.body {
+    min-height: 100vh; /* 高さ指定 */
+    text-align: center; /* 中央揃え */
+    font-size: medium; /* 文字の大きさ */
+    background: #FFD5EC; /* 背景色 */
+    display: flex;
+    flex-flow: column; /* 縦並び */
+    align-items: center; /* 上下中央寄せ */
+    justify-content: center; /* 左右中央寄せ */
+}
+
+.above {
+    display: flex;
+    align-items: center; /* 上下中央寄せ */
+    justify-content: center; /* 左右中央寄せ */
+}
+
+.pawloverslogoImg{
+    width: 20%; 
+    border: 1px solid #000; /* 枠線 */ 
+    border-radius: 30px; /* 丸み */ 
+    margin: 10px 50px; /* 上下左右の余白(外側) */         
+}
+
+.postButton, .mypageButton{
+    height: 150px;
+    width: 30%; 
+    font-size: large; /* 文字の大きさ */ 
+    border: none; /* 枠線 */
+    border-radius: 30px; /* 丸み */
+    background: #b09bd1; /* 背景色 */
+    margin: 10px 50px ; /* 上下左右の余白(外側) */
+}
+
+.postButton:hover, .mypageButton:hover {
+    background: #9a88c7;
+}
+
+.bottom{
+    width: 100%;
+    display: flex;
+    align-items: center; /* 上下中央寄せ */
+    justify-content: center; /* 左右中央寄せ */
+}
+
+.advertisement{
+    height:600px;
+    width: 20%; 
+    border: 1px solid #000; /* 枠線 */    
+    margin: 10px 30px; /* 上下左右の余白(外側) */                                
+}
+
+.media{
+    height:600px;
+    width: 50%; 
+    border: 1px solid #000; /* 枠線 */  
+    margin: 10px 30px; /* 上下左右の余白(外側) */                          
+}
