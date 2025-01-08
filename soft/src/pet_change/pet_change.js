@@ -11,4 +11,5 @@ const PetChange = () => {
   return (
       <div>広告</div>
     );
+}
 export default PetChange;
