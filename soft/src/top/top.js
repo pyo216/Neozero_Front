@@ -26,14 +26,14 @@ const TopPage = () => {
 
         <button // 「投稿する」ボタン
           className={styles.postButton}
-          onClick={handlePost} 
+          onClick={handlePost}
         >
           投稿する
         </button>
 
         <button // 「マイページ」ボタン
           className={styles.mypageButton}
-          onClick={handleMypage} 
+          onClick={handleMypage}
         >
           マイページ
         </button>
@@ -44,7 +44,7 @@ const TopPage = () => {
         <div className={styles.media}></div>
         <div className={styles.advertisement}>広告</div>
       </div>
-      
+
     </div>
   );
 };
