@@ -11,5 +11,6 @@ const PetCon = () => {
 return (
       <div>広告</div>
     );
+}
 
 export default PetCon;
