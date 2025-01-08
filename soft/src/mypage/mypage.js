@@ -5,19 +5,19 @@ import styles from './mypage.module.css'; // CSSモジュール
 const MyPage = () => {
     const navigate = useNavigate(); // ページ遷移用
 
-    const handleTopClick = () => { // 「トップページへ戻る」ボタン押下
+    const handleTop = () => { // 「トップページへ戻る」ボタン押下
       navigate('/top'); // トップページに移動
     };
 
-    const handlePetClick = () => { // 「ペット情報変更」ボタン押下
+    const handlePet = () => { // 「ペット情報変更」ボタン押下
       navigate('/pet'); // ペット情報変更画面に移動
     };
   
-    const handleNyakamaClick = () => { // 「Nyakama」ボタン押下
+    const handleNyakama = () => { // 「Nyakama」ボタン押下
       navigate('/nyakama'); // Nyakama画面に移動
     };
   
-    const handleMemberClick = () => { // 「会員情報選択」ボタン押下
+    const handleMember = () => { // 「会員情報選択」ボタン押下
       navigate('/member'); // 会員情報選択画面に移動
     };
   
@@ -29,28 +29,28 @@ const MyPage = () => {
 
           <button // 「トップページへ戻る」ボタン
             className={styles.topButton}
-            onClick={handleTopClick}
+            onClick={handleTop}
           >
             トップページへ戻る
           </button>
 
           <button // 「ペット情報変更」ボタン
             className={styles.petButton}
-            onClick={handlePetClick}
+            onClick={handlePet}
           >
             ペット情報変更
           </button>
 
           <button // 「Nyakama」ボタン
             className={styles.nyakamaButton}
-            onClick={handleNyakamaClick}
+            onClick={handleNyakama}
           >
             Nyakama
           </button>
 
           <button // 「会員情報選択」ボタン
             className={styles.memberButton}
-            onClick={handleMemberClick}
+            onClick={handleMember}
           >
             会員情報選択
           </button>
