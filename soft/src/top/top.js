@@ -6,11 +6,11 @@ import pawloverslogoImg from './pawlovers.png'; // PawLoversロゴ画像
 const TopPage = () => {
   const navigate = useNavigate(); // ページ遷移用
 
-  const handlePostClick = () => { // 「投稿する」ボタン押下
+  const handlePost = () => { // 「投稿する」ボタン押下
     navigate('/post'); // 投稿ページに移動
   };
 
-  const handleMypageClick = () => { // 「マイページ」ボタン押下
+  const handleMypage = () => { // 「マイページ」ボタン押下
     navigate('/mypage'); // マイページに移動
   };
 
@@ -26,14 +26,14 @@ const TopPage = () => {
 
         <button // 「投稿する」ボタン
           className={styles.postButton}
-          onClick={handlePostClick} 
+          onClick={handlePost} 
         >
           投稿する
         </button>
 
         <button // 「マイページ」ボタン
           className={styles.mypageButton}
-          onClick={handleMypageClick} 
+          onClick={handleMypage} 
         >
           マイページ
         </button>
