@@ -10,7 +10,7 @@ const AccountCon = () => {
 
 
   return (
-    
+    );
 };
 
 export default AccountCon;
