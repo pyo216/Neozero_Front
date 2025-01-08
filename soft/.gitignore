@@ -1,3 +1,31 @@
+# Node modules cache
 node_modules/.cache/
+
+# Environment variables
 .env
+
+# Log files
 *.log
+
+# Build artifacts
+dist/
+build/
+public/
+
+# IDE settings
+.idea/
+.vscode/
+.config/
+
+# Temporary files and cache
+npm-debug.log
+yarn-error.log
+
+# Test related files
+coverage/
+# tests/  # 必要に応じて
+
+# Local settings
+.gitconfig
+.editorconfig
+
