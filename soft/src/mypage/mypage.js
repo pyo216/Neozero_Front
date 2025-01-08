@@ -64,7 +64,7 @@ const MyPage = () => {
     
         <div className={styles.center}>
 
-          <div className={styles.mypage}>マイページ</div>
+          <div className={styles.title}>マイページ</div>
           <div className={styles.media}></div>
 
         </div>

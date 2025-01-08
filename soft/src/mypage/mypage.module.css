@@ -62,7 +62,7 @@
     text-align: center;
 }
 
-.mypage {
+.title {
     text-align: center;
     margin: 40px auto;
     border-radius: 30px;
@@ -70,7 +70,7 @@
     width: 50%;
     border: solid 1px;
     font-size: xx-large;
-    background: #9a88c7;
+    background: #fff; /* 背景色 */
     color: #FFD5EC;
 }
 
