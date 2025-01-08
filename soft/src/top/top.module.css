@@ -30,6 +30,7 @@
     border-radius: 30px; /* 丸み */
     background: #b09bd1; /* 背景色 */
     margin: 10px 50px ; /* 上下左右の余白(外側) */
+    cursor: pointer; /* カーソル変更 */
 }
 
 .postButton:hover, .mypageButton:hover {
