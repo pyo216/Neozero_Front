@@ -1,31 +1,31 @@
-# Node modules cache (already included)
-node_modules/.cache/
+# Node modules cache
+../../node_modules/ 
 
-# Environment variables (already included)
+# Environment variables 
 .env
 
-# Log files (already included)
+# Log files
 *.log
 
-# Build artifacts (already included)
+# Build artifacts
 dist/
 build/
 public/
 
-# IDE settings (already included)
+# IDE settings
 .idea/
 .vscode/
 .config/
 
-# Temporary files and cache (already included)
+# Temporary files and cache
 npm-debug.log
 yarn-error.log
 
-# Test related files (already included)
+# Test related files
 coverage/
 # tests/  # 必要に応じて
 
-# Local settings (already included)
+# Local settings
 .gitconfig
 .editorconfig
 
