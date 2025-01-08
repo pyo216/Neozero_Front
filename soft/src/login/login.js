@@ -1,34 +1,48 @@
-import React from 'react'; // React用
-import { useNavigate } from 'react-router-dom'; // ページ遷移用
-import styles from './login.module.css'; // CSSモジュール
-import pawloversImg from './pawlovers-side.jpg'; // PawLovers画像
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import styles from './login.module.css';
+import pawloversImg from './pawlovers-side.jpg';
 
 const LoginPage = () => {
-  const navigate = useNavigate(); // ページ遷移用
+  const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleLogin = () => { // 「ログイン」ボタン押下
-    navigate('/top'); // トップページに移動
+  const handleLogin = () => {
+    if (!email) {
+      setErrorMessage('※メールアドレスを入力してください。');
+      return;
+    }
+    if (!password) {
+      setErrorMessage('※パスワードを入力してください。');
+      return;
+    }
+    
+    setErrorMessage('');
+    navigate('/top');
   };
 
-  const handleRegister = () => { //「新規会員登録」ボタン押下
-    navigate('/terms'); // 新規会員登録ページに移動
+  const handleRegister = () => {
+    navigate('/terms');
   };
 
   return (
     <div className={styles.body}>
       <img
-        src={pawloversImg} // PawLovers画像
-        alt="pawloversImg" // 代替テキスト
+        src={pawloversImg}
+        alt="pawloversImg"
         className={styles.pawloversImg}
       />
 
       <form className={styles.login}>
-
         <div className={styles.formGroup}>
           <label htmlFor="email">メールアドレス</label>
-          <input // メールアドレス入力欄
+          <input
             type="email"
             id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="メールアドレスを入力してください"
             required
           />
@@ -36,17 +50,23 @@ const LoginPage = () => {
 
         <div className={styles.formGroup}>
           <label htmlFor="password">パスワード</label>
-          <input // パスワード入力欄
+          <input
             type="password"
             id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             placeholder="パスワードを入力してください"
             required
           />
         </div>
 
+<<<<<<< HEAD
         <p className={styles.errorMessage}></p>
+=======
+        {errorMessage && <p className={styles.errorMessage}>{errorMessage}</p>}
+>>>>>>> 77273836 (ページファイルだけ作った)
 
-        <button // 「ログイン」ボタン
+        <button
           type="button"
           onClick={handleLogin}
           className={styles.loginButton}
@@ -56,16 +76,14 @@ const LoginPage = () => {
 
         <p className={styles.new}>・・・・・・・・・・・初めての方はこちら・・・・・・・・・・・・</p>
 
-        <button //「新規会員登録」ボタン
+        <button
           type="button"
           onClick={handleRegister}
           className={styles.registerButton}
         >
           新規会員登録
         </button>
-
       </form>
-
     </div>
   );
 };
