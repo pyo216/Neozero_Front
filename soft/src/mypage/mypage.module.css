@@ -10,46 +10,47 @@
 
 .left, .right {
     flex: 1;
-    justify-content: center; 
-    align-items: center;
-    text-align: center;
+    display: flex;
+    flex-flow: column; /* 縦並び */
+    align-items: center; /* 上下中央寄せ */
+    justify-content: center; /* 左右中央寄せ */
 }
 
 .topButton {
-    font-size: large;
-    width: 90%; 
     height: 125px;
-    background: #b09bd1;  
-    border: none;
-    cursor: pointer;
-    border-radius: 20px;  
-    margin-bottom: 40px;    
+    width: 90%; 
+    font-size: large; /* 文字の大きさ */ 
+    border: none; /* 枠線 */
+    border-radius: 30px; /* 丸み */
+    background: #fff; /* 背景色 */
+    margin-bottom: 40px; /* 上の余白(外側) */
+    cursor: pointer; /* カーソル変更 */   
 }
 
 .topButton:hover {
-    background: #c3a8ca; 
+    background: #f8cfd9; /* 背景色 */
 }
 
 .petButton, .nyakamaButton, .memberButton {
-    font-size: large;
     height: 100px;
     width: 90%; 
-    background: #b09bd1;  
-    border: none;
-    cursor: pointer;
-    border-radius: 20px;  
-    margin-bottom: 40px;   
+    font-size: large; /* 文字の大きさ */
+    border: none; /* 枠線削除 */
+    border-radius: 30px; /* 丸み */
+    background: #b09bd1; /* 背景色 */
+    margin-bottom: 40px; /* 上の余白(外側) */
+    cursor: pointer;    
 }
 
 .petButton:hover, .nyakamaButton:hover, .memberButton:hover {
-    background: #9a88c7;
+    background: #9a88c7; /* 背景色 */
 }
 
 .inquiry {
-    width: 90%; 
-    padding: 35px 0;
-    background: #ffffff;
-    margin: 0 auto;
+    width: 90%;
+    background: #fff; /* 背景色 */
+    padding: 35px 0; /* 上下左右の余白(内側) */
+    margin: 0 auto; /* 上下左右の余白(外側) */
 }
 
 .center {
