@@ -31,7 +31,7 @@ const LoginPage = () => {
     <div className={styles.body}>
       <img
         src={pawloversImg} // PawLovers画像
-        alt="pawloversImg"
+        alt="pawloversImg" // 代替テキスト
         className={styles.pawloversImg}
       />
 
