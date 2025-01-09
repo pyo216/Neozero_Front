@@ -21,21 +21,21 @@ const Logout = () => {
 
   return (
     <div className={styles.body}>
-    <div class="left">
+    <div className={styles.left}>
       <button className={styles.topButton} onClick={handleTop}>トップページへ戻る</button>
       <div className={styles.advertisement}>広告</div> 
     </div>
 
-    <div class="center">
+    <div className={styles.center}>
       <div className={styles.logout}>ログアウト</div>
-      <div id="white">
-        <p>ログアウトするワン？</p>
-        <button className={styles.ok} onClick={handleok}>はい</button>
-        <button className={styles.no} onClik={handleno}>いいえ</button>
+      <div className={styles.white}>
+        <p className={styles.message}>ログアウトするワン？</p>
+        <button className={styles.okButton} onClick={handleok}>はい</button>
+        <button className={styles.noButton} onClick={handleno}>いいえ</button>
       </div>
     </div>
 
-    <div class="right">
+    <div className={styles.right}>
     <div className={styles.advertisement2}>広告</div>
     </div>
   </div>

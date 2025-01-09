@@ -33,14 +33,14 @@
     margin-bottom: 40px;    
 }
 
-.ok {
+.okButton {
     background: #ff8d78;
     margin-top: 20px;
     height: 60px;
     width: 40%; 
 }
 
-.no {
+.noButton {
     background: #789cff;
     margin-top: 20px;
     height: 60px;
@@ -51,11 +51,11 @@
     background: #c3a8ca; 
 }
 
-.ok:hover {
+.okButton:hover {
     background: #ff7d66;
 }
 
-.no:hover {
+.noButton:hover {
     background: #6b92fc;
 }
 
@@ -78,7 +78,7 @@
     justify-content: flex-start; 
 }
 
-.p{
+.message{
     font-size: x-large;
 }
 
@@ -110,6 +110,6 @@
     border: 1px solid;
 }
 
-::placeholder {
+input::placeholder {
     text-align: center;
 }
