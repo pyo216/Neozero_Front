@@ -8,31 +8,34 @@
 
 ・gitの使い方
 
-1. gitにファイルを追加する方法
+1. git使用の流れ
    
-◯ git pull --rebase    
+◯ git pull --rebase → gitの内容を自分のPCに反映
 
-◯ git add <ファイル名>
+◯ git add <ファイル名> → <ファイル名>をgitに追加予定にする
 
-◯ git commit -m <コメント>
+◯ git commit -m <コメント> → 編集の記録
 
-◯ git push
-
-2. 間違えてrmした場合
-
-◯ git restore <ファイル名>
+◯ git push → 追加予定のファイルをgitに追加
 
 3. gitの状態確認
 
 ◯ git status
 
-→ Changes to be committed(変更後にgit addしたファイル)
+→ Changes to be committed
+(変更後にgit addしたファイル/変更後にgit addしたけど、git commitもgit pushもしていない状態)
 
-→ Changes not staged for commit(変更後にgit addしていないファイル)
+→ Changes not staged for commit
+(変更後にgit addしていないファイル/変更後にけど、git addもしていない状態)
 
-→ Untracked files(Gitの管理下にないファイル)
+→ Untracked files
+(Gitの管理下にないファイル/新しくファイルを作ったけど、git addもしていない状態)
 
-4. ファイル名変更
+4. gitにある状態に戻す
+
+◯ git restore ファイル名
+
+5. ファイル名変更
 
 ◯ git mv <今のファイル名> <新しいファイル名>
 
