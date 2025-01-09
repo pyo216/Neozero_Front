@@ -32,6 +32,7 @@ function App() {
           <Route path="/mypage" element={<MyPage />} /> {/*マイページ */}
           <Route path="/member" element={<MemberPage />} /> {/*会員情報選択*/}   
           <Route path="/nyakama" element={<Nyakama />} /> {/*にゃかま*/}  
+          <Route path="/mail_change" element={<MailChange />} /> {/*メールアドレス変更*/}
         </Routes>
       </div>
     </Router>
@@ -43,7 +44,6 @@ function App() {
 //<Route path="/terms" element={<Terms />} /> {/*利用規約*/}
 //<Route path="/account_rm" element={<RmAccount />} /> {/*アカウント消去*/}
 //<Route path="/account_con" element={<AccountCon />} /> {/*アカウント消去確認*/}
-//<Route path="/mail_change" element={<MailChange />} /> {/*メールアドレス変更*/}
 //<Route path="/account_reg" element={<AccountReg />} /> {/*アカウント登録*/}
 //<Route path="/change_info" element={<ChangeInfo />} /> {/*会員情報変更画面*/}
 //<Route path="/change_pass" element={<ChangePass/>} /> {/*パスワード変更画面*/}
