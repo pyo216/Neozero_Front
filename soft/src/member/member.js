@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom'; // ページ遷移用
 import styles from './member.module.css'; // CSSモジュール
 
 const MemberPage = () => {
-  const navigate = useNavigate(); // ページ遷移用のフック
-
+  const navigate = useNavigate(); // ページ遷移用
+  
   const handleTop = () => { // 「トップページに戻る」ボタン押下
     navigate('/top'); // トップページに移動
   };
