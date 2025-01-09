@@ -1,9 +1,12 @@
 .body {
     min-height: 100vh; /* 高さ指定 */
-    background: #FFD5EC;
-    width: 50%;
-    margin: 0 auto;
-    text-align: center;
+    text-align: center; /* 中央揃え */
+    font-size: medium; /* 文字の大きさ */
+    background: #FFD5EC; /* 背景色 */
+    display: flex;
+    flex-flow: column; /* 縦並び */
+    align-items: center; /* 上下中央寄せ */
+    justify-content: center; /* 左右中央寄せ */
 }
 
 .information {

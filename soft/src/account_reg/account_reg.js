@@ -30,7 +30,7 @@ const InformationForm = () => {
   };
 
   return (
-    <div>
+    <div className={styles.body}>
       <div className={styles.information}>会員情報登録</div>
 
       <form className={styles.form}>
@@ -113,7 +113,7 @@ const InformationForm = () => {
       {/* OKボタン */}
       <button
         type="button"
-        id={styles.okButton}
+        className={styles.okButton}
         onClick={handleOk}
       >
         OK
