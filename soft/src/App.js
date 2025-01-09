@@ -30,14 +30,15 @@ function App() {
           <Route path="/login" element={<LoginPage />} /> {/* ログインページ */}
           <Route path="/top" element={<TopPage />} /> {/* トップページ */}
           <Route path="/mypage" element={<MyPage />} /> {/*マイページ */}
-          <Route path="/member" element={<MemberPage />} /> {/*会員情報選択*/}     
+          <Route path="/member" element={<MemberPage />} /> {/*会員情報選択*/}   
+          <Route path="/nyakama" element={<Nyakama />} /> {/*にゃかま*/}  
         </Routes>
       </div>
     </Router>
   );
 }
 //エラー出るからとりあえずおいてる
-//<Route path="/nyakama" element={<Nyakama />} /> {/*にゃかま*/}
+
 //<Route path="/logout" element={<Logout />} /> {/*ログアウト*/}
 //<Route path="/terms" element={<Terms />} /> {/*利用規約*/}
 //<Route path="/rm_account" element={<RmAccount />} /> {/*アカウント消去*/}
