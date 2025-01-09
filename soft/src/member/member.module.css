@@ -1,7 +1,8 @@
 .body {
     min-height: 100vh; /* 高さ指定 */
     text-align: center; /* 中央揃え */
-    background-color: #FFD5EC;
+    font-size: medium; /* 文字の大きさ */
+    background: #FFD5EC;
     display: flex;
     justify-content: center;
     align-items: center;
