@@ -12,7 +12,7 @@ const InformationForm = () => {
   const [comment, setComment] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = () => {
+  const handleOk = () => {
     const passwordRegex = /^[a-zA-Z0-9]{8,16}$/; // パスワードの形式チェック
 
     if (!email || !name || !password || !passwordConfirm) {
@@ -31,7 +31,7 @@ const InformationForm = () => {
 
   return (
     <div>
-      <div id={styles.information}>会員情報登録</div>
+      <div className={styles.information}>会員情報登録</div>
 
       <form className={styles.form}>
         {/* メールアドレス */}
@@ -79,7 +79,7 @@ const InformationForm = () => {
         </div>
 
         {/* パスワード確認 */}
-        <p id={styles.note}>※半角英数字8~16文字</p>
+        <p className={styles.note}>※半角英数字8~16文字</p>
         <div className={styles.item}>
           <label htmlFor="passwordConfirm">
             パスワード<span>※</span>
@@ -99,7 +99,7 @@ const InformationForm = () => {
         <div className={styles.item}>
           <label htmlFor="comment">フリーコメント</label>
           <textarea
-            id="comment"
+            className={styles.comment}
             placeholder="ペットの性別や年齢、コメントなど(100文字以内)"
             value={comment}
             onChange={(e) => setComment(e.target.value)}
@@ -108,13 +108,13 @@ const InformationForm = () => {
       </form>
 
       {/* エラーメッセージ */}
-      <p id={styles.errorMessage}>{errorMessage}</p>
+      <p className={styles.errorMessage}>{errorMessage}</p>
 
       {/* OKボタン */}
       <button
         type="button"
-        id={styles.submit}
-        onClick={handleSubmit}
+        id={styles.okButton}
+        onClick={handleOk}
       >
         OK
       </button>
