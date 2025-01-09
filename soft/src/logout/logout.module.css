@@ -38,6 +38,11 @@
     margin-top: 20px;
     height: 60px;
     width: 40%; 
+    border-radius: 20px;           /* 要素の角を20pxの半径で丸める */
+    border: solid 0.1px;           /* 要素の外枠を1pxの実線で描画 */
+    font-size: 18px;                /* 文字の大きさを指定 */
+    outline: none;                  /* フォーカス時の枠を非表示にする */
+    border: none;                   /* ボタンの枠線自体を削除する */
 }
 
 .noButton {
@@ -45,6 +50,11 @@
     margin-top: 20px;
     height: 60px;
     width: 40%; 
+    border: solid 0.1px;           /* 要素の外枠を1pxの実線で描画 */
+    border-radius: 20px;         /* 要素の角を20pxの半径で丸める */
+    font-size: 18px;                /* 文字の大きさを指定 */
+    outline: none;               /* フォーカス時の枠を非表示にする */
+    border: none;                /* ボタンの枠線自体を削除する */
 }
 
 .topButton:hover {
@@ -71,6 +81,7 @@
 .white{
     background: #ffffff; 
     width: 70%;
+    height: 300px; /* 高さを300pxに設定 */
     display: flex;
     flex-direction: column;
     align-items: center;

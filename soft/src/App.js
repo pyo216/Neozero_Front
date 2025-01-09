@@ -7,7 +7,7 @@ import MemberPage from'./member/member'; //会員情報選択
 import Nyakama from'./nyakama/nyakama'; //にゃかま
 import Logout from'./logout/logout'; //ログアウト
 import Terms from'./terms/terms'; //利用規約
-import RmAccount from'./account_rm/account_rm'; //アカウント消去
+//import RmAccount from'./account_rm/account_rm'; //アカウント消去
 import AccountCon from'./account_con/account_con'; //アカウント消去確認
 import MailChange from'./mail_change/mail_change'; //メールアドレス変更
 import ChangePass from'./change_pass/change_pass'; //パスワード変更画面
@@ -17,7 +17,6 @@ import Deletion from'./deletion/deletion'; //投稿消去画面
 import PetCon from './pet_con/pet_con'; //ペット変更確認画面
 import PetChange from './pet_change/pet_change'; //ペット変更確認画面
 import Post from './post/post'; //投稿画面
-
 
 
 
@@ -35,7 +34,7 @@ function App() {
           <Route path="/mail_change" element={<MailChange />} /> {/*メールアドレス変更*/}
           <Route path="/logout" element={<Logout />} /> {/*ログアウト*/}
           <Route path="/terms" element={<Terms />} /> {/*利用規約*/}
-          <Route path="/account_rm" element={<RmAccount />} /> {/*アカウント消去*/}
+          <Route path="/account_rm" element={<Logout />} /> {/*アカウント消去*/}   
           <Route path="/account_con" element={<AccountCon />} /> {/*アカウント消去確認*/}
           <Route path="/account_reg" element={<AccountReg />} /> {/*アカウント登録*/}
           <Route path="/change_info" element={<ChangeInfo />} /> {/*会員情報変更画面*/}
