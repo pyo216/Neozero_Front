@@ -31,7 +31,7 @@
     font-size: medium;
 }
 
-.button {
+.topButton {
     font-size: large;
     width: 90%; 
     height: 125px;
@@ -42,29 +42,39 @@
     margin-bottom: 40px;    
 }
 
-.ok {
+.topButton:hover {
+    background: #c3a8ca; 
+}
+
+.okButton {
+    font-size: large;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;  
+    margin-bottom: 40px;   
     background: #ff8d78;
     margin-top: 20px;
     height: 60px;
     width: 40%; 
 }
 
-.no {
+.okButton:hover {
+    background: #ff7d66;
+}
+
+.noButton {
+    font-size: large;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;  
+    margin-bottom: 40px;   
     background: #789cff;
     margin-top: 20px;
     height: 60px;
     width: 40%; 
 }
 
-.main-btn:hover {
-    background: #c3a8ca; 
-}
-
-.ok:hover {
-    background: #ff7d66;
-}
-
-.no:hover {
+.noButton:hover {
     background: #6b92fc;
 }
 
@@ -77,26 +87,7 @@
     justify-content: flex-start; 
 }
 
-.white{
-    background: #ffffff; 
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: flex-start; 
-}
-
-.p{
-    font-size: x-large;
-}
-
-.span {
-    color: red;
-}
-
-
-.account {
+.title {
     text-align: center;
     margin: 40px auto;
     border-radius: 30px;
@@ -108,6 +99,25 @@
     color: #FFD5EC;
 }
 
+.white{
+    background: #ffffff; 
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-start; 
+}
+
+.con{
+    font-size: x-large;
+}
+
+.span {
+    color: red;
+}
+
+
 .advertisement {
     width: 90%; 
     height: 550px;
@@ -115,15 +125,10 @@
     border: 1px solid;
 }
 
-
 .advertisement2 {
     width: 90%; 
     height: 750px;
     margin-top: 20px;    
     text-align: center;
     border: 1px solid;
-}
-
-::placeholder {
-    text-align: center;
 }
