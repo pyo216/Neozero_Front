@@ -38,9 +38,9 @@ const AccountCon = () => {
 
         <div className={styles.title}>ログアウト</div>
         <div className={styles.white}>
-          <p>
+          <p className={styles.con}>
             一度消去したアカウントは<br/>
-            <span>元には戻せません</span><br/>
+            <span className={styles.red}>元には戻せません</span><br/>
             ほんとにいいニャン？<br/>
           </p>
 
