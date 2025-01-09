@@ -49,6 +49,8 @@
 
 4. font-size
 
+→ 標準(medium)/input,button(large)/title(xx-large)
+
 5. border
    
 6. border-radius
