@@ -41,7 +41,7 @@ function App() {
 
 //<Route path="/logout" element={<Logout />} /> {/*ログアウト*/}
 //<Route path="/terms" element={<Terms />} /> {/*利用規約*/}
-//<Route path="/rm_account" element={<RmAccount />} /> {/*アカウント消去*/}
+//<Route path="/account_rm" element={<RmAccount />} /> {/*アカウント消去*/}
 //<Route path="/account_con" element={<AccountCon />} /> {/*アカウント消去確認*/}
 //<Route path="/mail_change" element={<MailChange />} /> {/*メールアドレス変更*/}
 //<Route path="/account_reg" element={<AccountReg />} /> {/*アカウント登録*/}
