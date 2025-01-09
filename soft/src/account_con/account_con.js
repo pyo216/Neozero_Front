@@ -1,6 +1,6 @@
 import React from 'react'; // React用
 import { useNavigate } from 'react-router-dom'; // ページ遷移用
-import styles from './account_con.module.css'; // CSSモジュール(cssファイルかく)
+import styles from './account_con.module.css'; // CSSモジュール
 
 const AccountCon = () => {
   const navigate = useNavigate(); // ページ遷移用
