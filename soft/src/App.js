@@ -47,7 +47,7 @@ function App() {
 //<Route path="/account_reg" element={<AccountReg />} /> {/*アカウント登録*/}
 //<Route path="/change_info" element={<ChangeInfo />} /> {/*会員情報変更画面*/}
 //<Route path="/change_pass" element={<ChangePass/>} /> {/*パスワード変更画面*/}
-//<Route path="/deletion" element={<Deletion/>} /> {/*パスワード変更画面*/}
+//<Route path="/deletion" element={<Deletion/>} /> {/*投稿消去画面*/}
 //<Route path="/pet_con" element={<PetCon/>} /> {/*ペット変更確認画面*/}
 //<Route path="/pet_change" element={<PetChange/>} /> {/*ペット変更画面*/}
 //<Route path="/post" element={<Post/>} /> {/*投稿画面*/}
