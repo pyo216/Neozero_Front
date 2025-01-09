@@ -1,42 +1,43 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import styles from './login.module.css';
-import pawloversImg from './pawlovers-side.jpg';
+import React, { useState } from 'react'; //React,エラーメッセージ用
+import { useNavigate } from 'react-router-dom'; // ページ遷移用
+import styles from './login.module.css'; // CSSモジュール
+import pawloversImg from './pawlovers-side.jpg'; // PawLovers画像
 
 const LoginPage = () => {
-  const navigate = useNavigate();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
+  const navigate = useNavigate(); // ページ遷移用
 
-  const handleLogin = () => {
-    if (!email) {
+  const [email, setEmail] = useState(''); // メールアドレスの状態
+  const [password, setPassword] = useState(''); // パスワードの状態
+  const [errorMessage, setErrorMessage] = useState(''); // エラーメッセージの状態
+
+  const handleLogin = () => { //「ログイン」ボタン押下
+    if (!email) { // メールアドレスが未入力のとき
       setErrorMessage('※メールアドレスを入力してください。');
       return;
-    }
-    if (!password) {
+    }else if (!password) { // パスワードが未入力のとき
       setErrorMessage('※パスワードを入力してください。');
       return;
-    }
-    
+    }else{ // 成功時 
     setErrorMessage('');
-    navigate('/top');
+    navigate('/top'); // トップページに移動
+    }
   };
 
-  const handleRegister = () => {
-    navigate('/terms');
+  const handleRegister = () => { //「新規会員登録」ボタン押下 
+    navigate('/terms'); // 新規会員登録画面に移動
   };
 
   return (
     <div className={styles.body}>
       <img
-        src={pawloversImg}
+        src={pawloversImg} // PawLovers画像
         alt="pawloversImg"
         className={styles.pawloversImg}
       />
 
-      <form className={styles.login}>
-        <div className={styles.formGroup}>
+
+      <form className={styles.login}>  {/* ログインフォーム */}
+        <div className={styles.formGroup}> {/* メールアドレス入力 */}
           <label htmlFor="email">メールアドレス</label>
           <input
             type="email"
@@ -48,7 +49,7 @@ const LoginPage = () => {
           />
         </div>
 
-        <div className={styles.formGroup}>
+        <div className={styles.formGroup}> {/* パスワード入力 */}
           <label htmlFor="password">パスワード</label>
           <input
             type="password"
@@ -60,10 +61,10 @@ const LoginPage = () => {
           />
         </div>
 
-        {errorMessage && <p className={styles.errorMessage}>{errorMessage}</p>}
+        {errorMessage && <p className={styles.errorMessage}>{errorMessage}</p>} {/* エラーメッセージを表示 */}
 
         <button
-          type="button"
+          type="button" //「ログイン」ボタン
           onClick={handleLogin}
           className={styles.loginButton}
         >
@@ -73,7 +74,7 @@ const LoginPage = () => {
         <p className={styles.new}>・・・・・・・・・・・・初めての方はこちら・・・・・・・・・・・・</p>
 
         <button
-          type="button"
+          type="button" //「新規会員登録」ボタン
           onClick={handleRegister}
           className={styles.registerButton}
         >
