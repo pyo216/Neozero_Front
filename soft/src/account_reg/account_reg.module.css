@@ -1,0 +1,91 @@
+body {
+    background: #FFD5EC;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#information {
+    width: 50%;
+    margin: 40px auto;
+    border-radius: 30px;
+    font-size: xx-large;
+    background: #ffffff;
+    color: #FFD5EC;
+    padding: 10px 0;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+label {
+    font-size: large;
+    padding: 10px;
+    background: #b09bd1;
+    border-radius: 30px;
+    width: 30%;
+    text-align: center;
+}
+
+input {
+    width: 60%;
+    height: 35px;
+    padding: 5px;
+    font-size: medium;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+textarea {
+    width: 60%;           
+    height: 100px;        
+    padding: 5px;         
+    font-size: medium;     
+    border: 1px solid #000; 
+    border-radius: 5px;    
+    resize: none;         
+}
+
+
+#comment {
+    height: 100px;
+}
+
+span {
+    color: red;
+}
+
+#note {
+    text-align: right;
+    padding-right: 4%;
+    font-size: smaller;
+}
+
+#error-message{
+    height: 20px;
+    color: red;
+}
+
+button {
+    font-size: xx-large;
+    background: #ffffff;
+    padding: 10px;
+    color: #FFD5EC;
+    width: 30%;
+    border-radius: 30px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #c3a8ca;
+}
+
+::placeholder {
+    text-align: center;
+}
