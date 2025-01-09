@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom'; // ページ遷移用
 import styles from "./account_reg.module.css"; // CSSモジュールを使用
 
-const InformationForm = () => {
+const AccountReg = () => {
   const navigate = useNavigate(); // ページ遷移用
 
   const [email, setEmail] = useState("");
@@ -31,7 +31,7 @@ const InformationForm = () => {
 
   return (
     <div className={styles.body}>
-      <div className={styles.information}>会員情報登録</div>
+      <div className={styles.title}>会員情報登録</div>
 
       <form className={styles.form}>
         {/* メールアドレス */}
@@ -122,4 +122,4 @@ const InformationForm = () => {
   );
 };
 
-export default InformationForm;
+export default AccountReg;

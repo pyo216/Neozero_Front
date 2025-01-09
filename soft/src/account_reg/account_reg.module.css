@@ -9,14 +9,13 @@
     justify-content: center; /* 左右中央寄せ */
 }
 
-.information {
+.title {
     width: 50%;
     margin: 40px auto;
     border-radius: 30px;
     font-size: xx-large;
     background: #ffffff;
     color: #FFD5EC;
-    padding: 10px 0;
 }
 
 .item {
@@ -31,7 +30,7 @@
     padding: 10px;
     background: #b09bd1;
     border-radius: 30px;
-    width: 30%;
+    width: 50%;
     text-align: center;
 }
 
