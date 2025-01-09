@@ -7,7 +7,7 @@ const TopPage = () => {
   const navigate = useNavigate(); // ページ遷移用
 
   const handlePost = () => { // 「投稿する」ボタン押下
-    navigate('/post'); // 投稿ページに移動
+    navigate('/post'); // 投稿画面に移動
   };
 
   const handleMypage = () => { // 「マイページ」ボタン押下
