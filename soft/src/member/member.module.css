@@ -2,27 +2,18 @@
     min-height: 100vh; /* 高さ指定 */
     text-align: center; /* 中央揃え */
     font-size: medium; /* 文字の大きさ */
-    background: #FFD5EC;
+    background: #FFD5EC; /* 背景色 */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    font-family: Arial, sans-serif; 
+    align-items: center; /* 上下中央寄せ */
+    justify-content: center; /* 左右中央寄せ */
 }
 
-.right {
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.left {
+.left, .right {
     flex: 1;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex-flow: column; /* 縦並び */
+    align-items: center; /* 上下中央寄せ */
+    justify-content: center; /* 左右中央寄せ */
 }
 
 .topButton {
