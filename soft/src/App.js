@@ -33,6 +33,17 @@ function App() {
           <Route path="/member" element={<MemberPage />} /> {/*会員情報選択*/}   
           <Route path="/nyakama" element={<Nyakama />} /> {/*にゃかま*/}  
           <Route path="/mail_change" element={<MailChange />} /> {/*メールアドレス変更*/}
+          <Route path="/logout" element={<Logout />} /> {/*ログアウト*/}
+          <Route path="/terms" element={<Terms />} /> {/*利用規約*/}
+          <Route path="/account_rm" element={<RmAccount />} /> {/*アカウント消去*/}
+          <Route path="/account_con" element={<AccountCon />} /> {/*アカウント消去確認*/}
+          <Route path="/account_reg" element={<AccountReg />} /> {/*アカウント登録*/}
+          <Route path="/change_info" element={<ChangeInfo />} /> {/*会員情報変更画面*/}
+          <Route path="/change_pass" element={<ChangePass/>} /> {/*パスワード変更画面*/}
+          <Route path="/deletion" element={<Deletion/>} /> {/*投稿消去画面*/}
+          <Route path="/pet_con" element={<PetCon/>} /> {/*ペット変更確認画面*/}
+          <Route path="/pet_change" element={<PetChange/>} /> {/*ペット変更画面*/}
+          <Route path="/post" element={<Post/>} /> {/*投稿画面*/}
         </Routes>
       </div>
     </Router>
@@ -40,17 +51,6 @@ function App() {
 }
 //エラー出るからとりあえずおいてる
 
-//<Route path="/logout" element={<Logout />} /> {/*ログアウト*/}
-//<Route path="/terms" element={<Terms />} /> {/*利用規約*/}
-//<Route path="/account_rm" element={<RmAccount />} /> {/*アカウント消去*/}
-//<Route path="/account_con" element={<AccountCon />} /> {/*アカウント消去確認*/}
-//<Route path="/account_reg" element={<AccountReg />} /> {/*アカウント登録*/}
-//<Route path="/change_info" element={<ChangeInfo />} /> {/*会員情報変更画面*/}
-//<Route path="/change_pass" element={<ChangePass/>} /> {/*パスワード変更画面*/}
-//<Route path="/deletion" element={<Deletion/>} /> {/*投稿消去画面*/}
-//<Route path="/pet_con" element={<PetCon/>} /> {/*ペット変更確認画面*/}
-//<Route path="/pet_change" element={<PetChange/>} /> {/*ペット変更画面*/}
-//<Route path="/post" element={<Post/>} /> {/*投稿画面*/}
 
 
 export default App;
