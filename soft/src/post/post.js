@@ -9,6 +9,7 @@ const Post = () => {
     caption: '',
     file: null
   });
+  const [imagePreview, setImagePreview] = useState(null);
 
   const handleTop = () => {
     navigate('/top');
@@ -23,10 +24,26 @@ const Post = () => {
   };
 
   const handleFileChange = (e) => {
-    setFormData(prev => ({
-      ...prev,
-      file: e.target.files[0]
-    }));
+    const file = e.target.files[0];
+    if (file && file.type.startsWith('image/')) {
+      setFormData(prev => ({
+        ...prev,
+        file: file
+      }));
+      
+      // 画像プレビューの作成
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImagePreview(reader.result);
+      };
+      reader.readAsDataURL(file);
+    } else {
+      setFormData(prev => ({
+        ...prev,
+        file: null
+      }));
+      setImagePreview(null);
+    }
   };
 
   const handleSubmit = () => {
@@ -40,13 +57,33 @@ const Post = () => {
       <div className={styles.white}>
         <div className={styles.post}>
           <div className={styles.file}>
-            <input
-              id="file"
-              type="file"
-              className={styles.input}
-              onChange={handleFileChange}
-              accept="image/*"
-            />
+            {imagePreview ? (
+              <div className={styles.previewContainer}>
+                <img 
+                  src={imagePreview} 
+                  alt="プレビュー" 
+                  className={styles.imagePreview}
+                />
+                <input
+                  id="file"
+                  type="file"
+                  className={styles.input}
+                  onChange={handleFileChange}
+                  accept="image/*"
+                />
+              </div>
+            ) : (
+              <div className={styles.uploadContainer}>
+                <p>画像をアップロード</p>
+                <input
+                  id="file"
+                  type="file"
+                  className={styles.input}
+                  onChange={handleFileChange}
+                  accept="image/*"
+                />
+              </div>
+            )}
           </div>
 
           <div className={styles.form}>
