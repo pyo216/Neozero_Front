@@ -56,8 +56,8 @@ const MyPage = () => {
         </button>
 
         <div className={styles.inquiry}>
-          問い合わせは<br />
-          general@ml.kochi-tech.ac.jp<br />
+          問い合わせは<br/>
+          general@ml.kochi-tech.ac.jp<br/>
           まで
         </div>
       </div>
