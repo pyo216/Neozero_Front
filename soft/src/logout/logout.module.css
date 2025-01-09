@@ -1,4 +1,5 @@
 .body {
+    min-height: 100vh; /* 高さ指定 */
     background-color: #FFD5EC;
     display: flex;
     justify-content: center; 
@@ -21,7 +22,7 @@
     text-align: center;
 }
 
-button {
+.topButton {
     font-size: large;
     width: 90%; 
     height: 125px;
@@ -32,29 +33,29 @@ button {
     margin-bottom: 40px;    
 }
 
-#ok {
+.ok {
     background: #ff8d78;
     margin-top: 20px;
     height: 60px;
     width: 40%; 
 }
 
-#no {
+.no {
     background: #789cff;
     margin-top: 20px;
     height: 60px;
     width: 40%; 
 }
 
-#main-btn:hover {
+.topButton:hover {
     background: #c3a8ca; 
 }
 
-#ok:hover {
+.ok:hover {
     background: #ff7d66;
 }
 
-#no:hover {
+.no:hover {
     background: #6b92fc;
 }
 
@@ -67,7 +68,7 @@ button {
     justify-content: flex-start; 
 }
 
-#white{
+.white{
     background: #ffffff; 
     width: 70%;
     display: flex;
@@ -77,11 +78,11 @@ button {
     justify-content: flex-start; 
 }
 
-p{
+.p{
     font-size: x-large;
 }
 
-#logout {
+.logout {
     text-align: center;
     margin: 40px auto;
     border-radius: 30px;
@@ -93,7 +94,7 @@ p{
     color: #FFD5EC;
 }
 
-#advertisement {
+.advertisement {
     width: 90%; 
     height: 550px;
     text-align: center;
@@ -101,7 +102,7 @@ p{
 }
 
 
-#advertisement2 {
+.advertisement2 {
     width: 90%; 
     height: 750px;
     margin-top: 20px;    
