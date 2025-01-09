@@ -26,7 +26,7 @@
 (変更後にgit addしたファイル/変更後にgit addしたけど、git commitもgit pushもしていない状態)
 
 → Changes not staged for commit
-(変更後にgit addしていないファイル/変更後にけど、git addもしていない状態)
+(変更後にgit addしていないファイル/変更後したけど、git addもしていない状態)
 
 → Untracked files
 (Gitの管理下にないファイル/新しくファイルを作ったけど、git addもしていない状態)
