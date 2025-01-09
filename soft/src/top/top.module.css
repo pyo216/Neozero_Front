@@ -34,7 +34,7 @@
 }
 
 .postButton:hover, .mypageButton:hover {
-    background: #9a88c7;
+    background: #9a88c7; /* 背景色 */
 }
 
 .bottom{
