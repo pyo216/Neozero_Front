@@ -15,7 +15,7 @@ import AccountReg from'./account_reg/account_reg'; //アカウント登録
 import ChangeInfo from'./change_info/change_info'; //会員情報変更画面
 import Deletion from'./deletion/deletion'; //投稿消去画面
 import PetCon from './pet_con/pet_con'; //ペット変更確認画面
-import PetChange from './pet_change/pet_change'; //ペット変更確認画面
+import PetChange from './pet_change/pet_change'; //ペット変更画面
 import Post from './post/post'; //投稿画面
 
 

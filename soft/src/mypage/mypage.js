@@ -10,7 +10,7 @@ const MyPage = () => {
   };
 
   const handlePet = () => { // 「ペット情報変更」ボタン押下
-    navigate('/pet'); // ペット情報変更画面に移動
+    navigate('/pet_change'); // ペット情報変更画面に移動
   };
 
   const handleNyakama = () => { // 「Nyakama」ボタン押下
