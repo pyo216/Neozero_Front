@@ -45,9 +45,15 @@
 
 2. min-width/max-width/width
 
-3. text-align
+3. top/bottom/right/left
 
-4. font-size
+4. position
+
+5.transform
+
+6. text-align
+
+7. font-size
 
 → 標準(medium)/input,button(large)/title(xx-large)
 
