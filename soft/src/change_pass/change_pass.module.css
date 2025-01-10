@@ -1,4 +1,5 @@
 .body {
+    min-height: 100vh; /* 高さ指定 */
     background-color: #FFD5EC;
     display: flex;
     justify-content: center; 
@@ -21,7 +22,7 @@
     text-align: center;
 }
 
-input {
+.input {
     width: 80%; 
     height: 40px;
     padding: 5px;
@@ -31,7 +32,7 @@ input {
     font-size: medium;
 }
 
-button {
+.topbutton {
     font-size: large;
     width: 90%; 
     height: 125px;
@@ -42,17 +43,17 @@ button {
     margin-bottom: 40px;    
 }
 
-#ok {
+.okbutton {
     margin-top: 30px;
     height: 60px;
     width: 30%; 
 }
 
-#main-btn:hover {
+.topbutton:hover {
     background: #c3a8ca; 
 }
 
-#ok:hover {
+.okbutton:hover {
     background: #c3a8ca; 
 }
 
@@ -65,7 +66,7 @@ button {
     justify-content: flex-start; 
 }
 
-#password {
+.password {
     text-align: center;
     margin: 40px auto;
     border-radius: 30px;
@@ -77,18 +78,18 @@ button {
     color: #FFD5EC;
 }
 
-p{
+.errorMessage{
     height: 20px;
     color: red; /* 文字の色 */
 }
 
-.input-container {
+.inputContainer {
     margin: 10px auto;
     position: relative;
     width: 80%; 
 }
 
-#note {
+.note {
     position: absolute;
     bottom: -25px;
     right: 0;
@@ -96,14 +97,14 @@ p{
     color: #777;
 }
 
-#advertisement {
+.advertisement {
     width: 90%; 
     height: 550px;
     text-align: center;
     border: 1px solid;
 }
 
-#advertisement2 {
+.advertisement2 {
     width: 90%; 
     height: 750px;
     margin-top: 20px;    
