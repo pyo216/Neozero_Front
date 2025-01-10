@@ -9,6 +9,10 @@
     justify-content: center; /* 左右中央寄せ */
 }
 
+.form{
+    width: 60%   
+}
+
 .title {
     width: 50%;
     margin: 40px auto;
@@ -16,6 +20,7 @@
     font-size: xx-large;
     background: #ffffff;
     color: #FFD5EC;
+    padding: 10px 0;
 }
 
 .item {
