@@ -57,18 +57,18 @@
 
 → 標準(medium)/input,button(large)/title(xx-large)
 
-5. border
+8. border
    
-6. border-radius
+9. border-radius
     
-7. color
+10. color
     
-8. background
+11. background
     
-9. padding
+12. padding
     
-10. margin
+13. margin
     
-11. cursor
+14. cursor
     
-12. display
+15. display
