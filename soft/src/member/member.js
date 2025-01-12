@@ -10,7 +10,7 @@ const MemberPage = () => {
   };
 
   const handleChange = () => { // 「会員情報変更」ボタン押下
-    navigate('/change'); // 会員情報変更画面に移動
+    navigate('/change_info'); // 会員情報変更画面に移動
   };
 
   const handleLogout = () => { // 「ログアウト」ボタン押下
@@ -18,7 +18,7 @@ const MemberPage = () => {
   };
 
   const handleAccount = () => { // 「アカウント消去」ボタン押下
-    navigate('/account'); // アカウント消去画面に移動
+    navigate('/account_con'); // アカウント消去画面に移動
   };
 
   return (
