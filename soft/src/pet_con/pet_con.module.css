@@ -44,15 +44,25 @@
 }
 
 .okbutton {
+    font-size: large;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;  
+    margin-bottom: 40px;   
     background: #ff8d78;
-    margin-top: 10px;
+    margin-top: 20px;
     height: 60px;
     width: 40%; 
 }
 
 .nobutton {
+    font-size: large;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;  
+    margin-bottom: 40px;   
     background: #789cff;
-    margin-top: 10px;
+    margin-top: 20px;
     height: 60px;
     width: 40%; 
 }

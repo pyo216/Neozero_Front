@@ -31,11 +31,11 @@ const ChangePass = () => {
   }
 
   // 認証確認
-  if (nowEmail === 'admin@example.com' && nowPassword === 'password123') {
+  //if (nowEmail === 'admin@example.com' && nowPassword === 'password123') {
     navigate('/change_info');
-  } else {
-    setErrorMessage('※間違っています。もう一度入力してください。');
-  }
+  //} else {
+    //setErrorMessage('※間違っています。もう一度入力してください。');
+  //}
 };
 
   return (

@@ -44,9 +44,15 @@
 }
 
 .okbutton {
-    margin-top: 30px;
+    font-size: large;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;  
+    margin-bottom: 40px;   
+    background: #ff8d78;
+    margin-top: 20px;
     height: 60px;
-    width: 30%; 
+    width: 40%; 
 }
 
 .topbutton:hover {
