@@ -1,64 +1,74 @@
-import React from 'react'; // React用
-import { useNavigate } from 'react-router-dom'; // ページ遷移用
-/*
-import styles from './account_rm.module.css'; // CSSモジュール(cssファイルかく)
-*/
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import styles from './account_rm.module.css';
 
 const RmAccount = () => {
-    //ここから下変える
- const navigate = useNavigate(); // ページ遷移用
+  const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
- const handletop = () => { // 「トップページ」ボタン押下
-    navigate('/top'); // <トップページ画面>に移動
+  const handleOkClick = () => {
+    if (!email || !password) {
+      setErrorMessage('※入力に不備があります。');
+      return;
+    }
+
+    //if (email === 'admin@example.com' && password === 'password123') {
+      navigate('/login');
+    //} else {
+      //setErrorMessage('※間違っています。もう一度入力してください。');
+    //}
   };
 
-  const handlelogin = () => { // 「<ログイン>」ボタン押下
-    navigate('/login'); // <ログイン画面>に移動
+  const handleTopClick = () => {
+    navigate('/top');
   };
-
 
   return (
-    <div className={StyleSheet.body}>
-    <div class="left">
-      <button id="main-btn" onclick="location.href='./main.html'">トップページへ戻る</button>
-      <div id="advertisement">広告</div>
+    <div className={styles.body}>
+      <div className={styles.left}>
+        <button
+          type="button"
+          onClick={handleTopClick}
+          className={styles.mainBtn}
+        >
+          トップページに戻る
+        </button>
+        <div className={styles.advertisement}>広告</div>
+      </div>
+
+      <div className={styles.center}>
+        <div className={styles.account}>アカウント消去</div>
+        <p className={styles.errorMessage}>{errorMessage}</p>
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className={styles.input}
+          placeholder="メールアドレス"
+        />
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className={styles.input}
+          placeholder="パスワード"
+        />
+        <button
+          type="button"
+          onClick={handleOkClick}
+          className={styles.okButton}
+        >
+          OK
+        </button>
+      </div>
+
+      <div className={styles.right}>
+        <div className={styles.advertisement2}>広告</div>
+      </div>
     </div>
-
-    <div class="center">
-      <div id="account">アカウント消去</div>
-      <p id="error-message"></p>
-      <input type="email" id="email" placeholder="メールアドレス" />
-      <input type="password" id="password" placeholder="パスワード" />
-      <button id="ok">OK</button>
-    </div>
-
-    <div class="right">
-      <div id="advertisement2">広告</div>
-    </div>
-
-    <script>
-      const ok = document.getElementById('ok'); //OKボタン取得
-      const errorMessage = document.getElementById('error-message'); //エラーメッセージ取得
-
-      // OKボタンが押された時
-      ok.addEventListener('click', () => {
-          const email = document.getElementById('email').value; //メールアドレス取得
-          const password = document.getElementById('password').value; //パスワード取得
-
-          if (!email && !password) { //入力欄が空白の時
-              errorMessage.textContent = '※間違っています。もう一度入力してください。'; //エラーメッセージを表示させる
-              return;
-          }else if (email === 'admin@example.com' && password === 'password123') { //成功時
-              window.location.href = './login.html'; // ログイン画面に遷移
-          } else { //失敗時
-              errorMessage.textContent = '※間違っています。もう一度入力してください。'; //エラーメッセージを表示させる
-          }
-      });
-
-    </script>
-
-  </div>
-    );
+  );
 };
 
 export default RmAccount;

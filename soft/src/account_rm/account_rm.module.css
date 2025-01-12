@@ -3,14 +3,8 @@
     display: flex;
     justify-content: center; 
     align-items: center;    
-    margin: 0;              
-}
-
-.right {
-    flex: 1;
-    justify-content: center; 
-    align-items: center;
-    text-align: center;
+    margin: 0;
+    min-height: 100vh;
 }
 
 .left {
@@ -21,39 +15,11 @@
     text-align: center;
 }
 
-input {
-    width: 70%;
-    height: 40px;
-    padding: 5px;
-    margin: 20px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    font-size: medium;
-}
-
-button {
-    font-size: large;
-    width: 90%; 
-    height: 125px;
-    background: #ffffff;  
-    border: none;
-    cursor: pointer;
-    border-radius: 20px;  
-    margin-bottom: 40px;    
-}
-
-#ok {
-    margin-top: 30px;
-    height: 60px;
-    width: 30%; 
-}
-
-#main-btn:hover {
-    background: #c3a8ca; 
-}
-
-#ok:hover {
-    background: #c3a8ca; 
+.right {
+    flex: 1;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
 }
 
 .center {
@@ -65,7 +31,44 @@ button {
     justify-content: flex-start; 
 }
 
-#account {
+.input {
+    width: 70%;
+    height: 40px;
+    padding: 5px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: medium;
+    text-align: center;
+}
+
+.mainBtn {
+    font-size: large;
+    width: 90%; 
+    height: 125px;
+    background: #ffffff;  
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;  
+    margin-bottom: 40px;    
+}
+
+.okButton {
+    margin-top: 30px;
+    height: 60px;
+    width: 30%;
+    font-size: large;
+    background: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.mainBtn:hover, .okButton:hover {
+    background: #c3a8ca; 
+}
+
+.account {
     text-align: center;
     margin: 40px auto;
     border-radius: 30px;
@@ -77,27 +80,22 @@ button {
     color: #FFD5EC;
 }
 
-p{
+.errorMessage {
     height: 20px;
-    color: red; /* 文字の色 */
+    color: red;
 }
 
-#advertisement {
+.advertisement {
     width: 90%; 
     height: 550px;
     text-align: center;
     border: 1px solid;
 }
 
-
-#advertisement2 {
+.advertisement2 {
     width: 90%; 
     height: 750px;
     margin-top: 20px;    
     text-align: center;
     border: 1px solid;
-}
-
-::placeholder {
-    text-align: center;
 }
