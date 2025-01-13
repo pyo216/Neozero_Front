@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'; // ページ遷移用
 import styles from './change_info.module.css'; // CSSモジュール(cssファイルかく)
 
 const ChangeInfo = () => {
-    //ここから下変える
+  //ここから下変える
   const navigate = useNavigate(); // ページ遷移用
 
   const handletop = () => { //「トップページ」ボタン押下 
@@ -22,40 +22,40 @@ const ChangeInfo = () => {
 
   return (
     <div className={styles.body}>
-    <div cclassName={styles.left}>
-    <button // 「トップページへ戻る」ボタン
+      <div cclassName={styles.left}>
+        <button // 「トップページへ戻る」ボタン
           className={styles.button}
           onClick={handletop}
->
- トップページへ戻る
-</button>
-  
-      <div className={styles.advertisement}>広告</div>
-    </div>
+        >
+          トップページへ戻る
+        </button>
 
-    <div className={styles.center}>
-      <div className={styles.change}>会員情報変更</div>
-      <button // 「メアド」ボタン
+        <div className={styles.advertisement}>広告</div>
+      </div>
+
+      <div className={styles.center}>
+        <div className={styles.change}>会員情報変更</div>
+        <button // 「メアド」ボタン
           className={styles.important}
           onClick={handlemail_change}
->
- メールアドレス変更
-</button>
+        >
+          メールアドレス変更
+        </button>
 
-<button // 「パスワード」ボタン
+        <button // 「パスワード」ボタン
           className={styles.important}
           onClick={handlechange_pass}
->
- パスワード変更
-</button>
+        >
+          パスワード変更
+        </button>
+      </div>
+
+      <div className={styles.right}>
+        <div className={styles.advertisement2}>広告</div>
+      </div>
     </div>
 
-    <div className={styles.right}>
-      <div className={styles.advertisement2}>広告</div>
-    </div>
-  </div>
-
-    );
+  );
 };
 
 export default ChangeInfo;

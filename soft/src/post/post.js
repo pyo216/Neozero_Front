@@ -1,3 +1,4 @@
+//  投稿画面
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './post.module.css';
@@ -30,7 +31,7 @@ const Post = () => {
         ...prev,
         file: file
       }));
-      
+
       // 画像プレビューの作成
       const reader = new FileReader();
       reader.onloadend = () => {
@@ -59,9 +60,9 @@ const Post = () => {
           <div className={styles.file}>
             {imagePreview ? (
               <div className={styles.previewContainer}>
-                <img 
-                  src={imagePreview} 
-                  alt="プレビュー" 
+                <img
+                  src={imagePreview}
+                  alt="プレビュー"
                   className={styles.imagePreview}
                 />
                 <input

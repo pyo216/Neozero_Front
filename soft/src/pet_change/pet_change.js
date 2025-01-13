@@ -1,3 +1,4 @@
+//ペット情報変更
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './pet_change.module.css';
@@ -28,7 +29,7 @@ const PetChange = () => {
   return (
     <div className={styles.body}>
       <div className={styles.left}>
-        <button 
+        <button
           className={styles['main-btn']}
           onClick={handleTop}
         >
@@ -43,9 +44,9 @@ const PetChange = () => {
           <div className={styles.photoContainer}>
             <div className={styles.photo}>
               {imagePreview ? (
-                <img 
-                  src={imagePreview} 
-                  alt="ペットの画像" 
+                <img
+                  src={imagePreview}
+                  alt="ペットの画像"
                   style={{
                     width: '100%',
                     height: '100%',
@@ -57,7 +58,7 @@ const PetChange = () => {
                 <div>🐾</div>
               )}
             </div>
-            <button 
+            <button
               className={styles.imageButton}
               onClick={() => document.getElementById('imageInput').click()}
             >
@@ -73,18 +74,18 @@ const PetChange = () => {
           </div>
 
           <div className={styles.information}>
-            <input 
-              type="text" 
-              placeholder="名前" 
+            <input
+              type="text"
+              placeholder="名前"
               className={styles.input}
             />
-            <textarea 
+            <textarea
               placeholder="フリーコメント"
               className={styles.textarea}
             ></textarea>
           </div>
         </div>
-        <button 
+        <button
           className={styles['ok-btn']}
           onClick={handlepetcon}
         >

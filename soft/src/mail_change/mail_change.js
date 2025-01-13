@@ -1,3 +1,4 @@
+//メールアドレス変更
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './mail_change.module.css';
@@ -21,7 +22,7 @@ const MailChange = () => {
     if (!currentEmail || !newEmail || !currentPassword) {
       setErrorMessage('※未入力欄があります。');
       return;
-    }else{
+    } else {
       //入力されてたら
       navigate('/change_info');
     }
@@ -38,7 +39,7 @@ const MailChange = () => {
   return (
     <div className={styles.body}>
       <div className={styles.left}>
-        <button 
+        <button
           className={styles['main-button']}
           onClick={handleTop}
         >
@@ -76,7 +77,7 @@ const MailChange = () => {
           value={formData.currentPassword}
           onChange={handleInputChange}
         />
-        <button 
+        <button
           className={styles.ok}
           onClick={handleOk}
         >

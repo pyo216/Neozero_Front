@@ -1,3 +1,4 @@
+//  アカウント登録
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom'; // ページ遷移用
 import styles from "./account_reg.module.css"; // CSSモジュールを使用

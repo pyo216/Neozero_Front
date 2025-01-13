@@ -1,3 +1,4 @@
+//アカウント消去
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './account_rm.module.css';
@@ -15,9 +16,9 @@ const RmAccount = () => {
     }
 
     //if (email === 'admin@example.com' && password === 'password123') {
-      navigate('/login');
+    navigate('/login');
     //} else {
-      //setErrorMessage('※間違っています。もう一度入力してください。');
+    //setErrorMessage('※間違っています。もう一度入力してください。');
     //}
   };
 
