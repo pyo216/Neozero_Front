@@ -2,6 +2,7 @@
 import React from 'react'; // React用
 import { useNavigate } from 'react-router-dom'; // ページ遷移用
 import styles from './top.module.css'; // CSSモジュール
+import fontstyles from '../font/font.module.css';
 import pawloverslogoImg from './pawlovers.png'; // PawLoversロゴ画像
 
 const TopPage = () => {
@@ -14,8 +15,13 @@ const TopPage = () => {
   const handleMypage = () => { // 「マイページ」ボタン押下
     navigate('/mypage'); // マイページに移動
   };
+  const inputStyle = {
+    fontFamily: 'CraftMincho, serif'
+  };
+
 
   return (
+    <div className={fontstyles.fontFamily}>
     <div className={styles.body}>
 
       <div className={styles.above}>
@@ -28,6 +34,7 @@ const TopPage = () => {
         <button // 「投稿する」ボタン
           className={styles.postButton}
           onClick={handlePost}
+          style={inputStyle}
         >
           投稿する
         </button>
@@ -35,6 +42,7 @@ const TopPage = () => {
         <button // 「マイページ」ボタン
           className={styles.mypageButton}
           onClick={handleMypage}
+          style={inputStyle}
         >
           マイページ
         </button>
@@ -46,6 +54,7 @@ const TopPage = () => {
         <div className={styles.advertisement}>広告</div>
       </div>
 
+      </div>
     </div>
   );
 };

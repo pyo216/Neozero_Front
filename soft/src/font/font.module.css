@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'CraftMincho';
+    src: url('./craftmincho.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .fontFamily {
+    font-family: 'CraftMincho', serif;
+  }
