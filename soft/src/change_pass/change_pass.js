@@ -14,6 +14,13 @@ const ChangePass = () => {
   const [newPasswordCon, setNewPasswordCon] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
+// パスワードバリデーション用の関数
+const validatePassword = (password) => {
+  // 半角英数字のみを許可する正規表現
+  const passwordRegex = /^[a-zA-Z0-9]{8,16}$/;
+  return passwordRegex.test(password);
+};
+
   const handleTop = () => { // 「トップページへ戻る」ボタン押下
     navigate('/top'); // トップページに移動
   };
@@ -24,9 +31,21 @@ const ChangePass = () => {
       return;
     }
   
+// 新パスワードのバリデーション
+if (!validatePassword(newPassword)) {
+  setErrorMessage('※新しいパスワードは半角英数字8～16文字で入力してください。');
+  return;
+}
+
   // 新パスワードの一致確認
   if (newPassword !== newPasswordCon) {
     setErrorMessage('※間違っています。もう一度入力してください。');
+    return;
+  }
+
+   // パスワードが現在のパスワードと同じ場合はエラー
+   if (newPassword === nowPassword) {
+    setErrorMessage('※新しいパスワードは現在のパスワードと異なるものを設定してください。');
     return;
   }
 
