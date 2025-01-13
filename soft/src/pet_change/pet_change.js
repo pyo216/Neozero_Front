@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './pet_change.module.css';
+import fontstyles from '../font/font.module.css';
 
 const PetChange = () => {
   const navigate = useNavigate();
@@ -13,6 +14,9 @@ const PetChange = () => {
 
   const handlepetcon = () => {
     navigate('/pet_con');
+  };
+  const inputStyle = {
+    fontFamily: 'CraftMincho, serif'
   };
 
   const handleImageChange = (event) => {
@@ -27,11 +31,13 @@ const PetChange = () => {
   };
 
   return (
+    <div className={fontstyles.fontFamily}>
     <div className={styles.body}>
       <div className={styles.left}>
         <button
           className={styles['main-btn']}
           onClick={handleTop}
+          style={inputStyle}
         >
           トップページへ戻る
         </button>
@@ -60,6 +66,7 @@ const PetChange = () => {
             </div>
             <button
               className={styles.imageButton}
+              style={inputStyle}
               onClick={() => document.getElementById('imageInput').click()}
             >
               画像を挿入
@@ -78,16 +85,19 @@ const PetChange = () => {
               type="text"
               placeholder="名前"
               className={styles.input}
+              style={inputStyle}
             />
             <textarea
               placeholder="フリーコメント"
               className={styles.textarea}
+              style={inputStyle}
             ></textarea>
           </div>
         </div>
         <button
           className={styles['ok-btn']}
           onClick={handlepetcon}
+          style={inputStyle}
         >
           変更
         </button>
@@ -96,6 +106,7 @@ const PetChange = () => {
       <div className={styles.right}>
         <div className={styles.advertisement2}>広告</div>
       </div>
+    </div>
     </div>
   );
 };

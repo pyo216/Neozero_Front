@@ -63,7 +63,6 @@ const Login = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="パスワードを入力してください"
-              
               required
             />
           </div>

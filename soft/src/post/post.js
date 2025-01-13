@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './post.module.css';
+import fontstyles from '../font/font.module.css';
 
 const Post = () => {
   const navigate = useNavigate();
@@ -32,6 +33,7 @@ const Post = () => {
         file: file
       }));
 
+      
       // 画像プレビューの作成
       const reader = new FileReader();
       reader.onloadend = () => {
@@ -52,8 +54,13 @@ const Post = () => {
     console.log('投稿データ:', formData);
     navigate('/top');
   };
+  const inputStyle = {
+    fontFamily: 'CraftMincho, serif'
+  };
+
 
   return (
+    <div className={fontstyles.fontFamily}>
     <div className={styles.body}>
       <div className={styles.white}>
         <div className={styles.post}>
@@ -82,6 +89,7 @@ const Post = () => {
                   className={styles.input}
                   onChange={handleFileChange}
                   accept="image/*"
+                  style={inputStyle}
                 />
               </div>
             )}
@@ -97,6 +105,7 @@ const Post = () => {
                 className={styles.input}
                 placeholder="(11字以内)"
                 value={formData.title}
+                style={inputStyle}
                 onChange={handleInputChange}
                 maxLength={11}
               />
@@ -108,6 +117,7 @@ const Post = () => {
                 name="caption"
                 className={styles.textarea}
                 placeholder="(50字以内)"
+                style={inputStyle}
                 value={formData.caption}
                 onChange={handleInputChange}
                 maxLength={50}
@@ -120,6 +130,7 @@ const Post = () => {
           <button
             type="button"
             onClick={handleTop}
+            style={inputStyle}
             className={`${styles.button} ${styles.return}`}
           >
             戻る
@@ -127,12 +138,15 @@ const Post = () => {
           <button
             type="button"
             onClick={handleSubmit}
+            style={inputStyle}
             className={`${styles.button} ${styles.register}`}
+            
           >
             登録
           </button>
         </div>
       </div>
+    </div>
     </div>
   );
 };

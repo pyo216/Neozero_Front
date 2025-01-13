@@ -1,5 +1,6 @@
 //投稿消去画面
 import React from 'react'; // React用
+import fontstyles from '../font/font.module.css';
 import { useNavigate } from 'react-router-dom'; // ページ遷移用
 import styles from './deletion.module.css'; // CSSモジュール(cssファイルかく)
 
@@ -15,13 +16,19 @@ const Deletion = () => {
     navigate('/deletion'); // 投稿消去画面に移動
   };
 
+  const inputStyle = {
+    fontFamily: 'CraftMincho, serif'
+  };
+
 
   return (
+     <div className={fontstyles.fontFamily}>
     <div className={styles.body}>
       <div className={styles.left}>
         <button // 「トップページへ戻る」ボタン
           className={styles.button}
           onClick={handletop}
+          style={inputStyle}
         >
           トップページへ戻る
         </button>
@@ -35,6 +42,7 @@ const Deletion = () => {
         <button // 「トップページへ戻る」ボタン
           className={styles.ok}
           onClick={handledeletion}
+          style={inputStyle}
         >
           消去
         </button>
@@ -43,6 +51,7 @@ const Deletion = () => {
       <div className={styles.right}>
         <div className={styles.advertisement2}>広告</div>
       </div>
+    </div>
     </div>
   );
 };

@@ -3,6 +3,7 @@
 import React from 'react'; // React用
 import { useNavigate } from 'react-router-dom'; // ページ遷移用
 import styles from './change_info.module.css'; // CSSモジュール(cssファイルかく)
+import fontstyles from '../font/font.module.css';
 
 const ChangeInfo = () => {
   //ここから下変える
@@ -20,12 +21,18 @@ const ChangeInfo = () => {
     navigate('/change_pass'); // パスワードに移動
   };
 
+  const inputStyle = {
+    fontFamily: 'CraftMincho, serif'
+  };
+
   return (
+    <div className={fontstyles.fontFamily}>
     <div className={styles.body}>
       <div className={styles.left}>
         <button // 「トップページへ戻る」ボタン
           className={styles.button}
           onClick={handletop}
+          style={inputStyle}
         >
           トップページへ戻る
         </button>
@@ -38,6 +45,7 @@ const ChangeInfo = () => {
         <button // 「メアド」ボタン
           className={styles.important}
           onClick={handlemail_change}
+          style={inputStyle}
         >
           メールアドレス変更
         </button>
@@ -45,6 +53,7 @@ const ChangeInfo = () => {
         <button // 「パスワード」ボタン
           className={styles.important}
           onClick={handlechange_pass}
+          style={inputStyle}
         >
           パスワード変更
         </button>
@@ -53,6 +62,7 @@ const ChangeInfo = () => {
       <div className={styles.right}>
         <div className={styles.advertisement2}>広告</div>
       </div>
+    </div>
     </div>
 
   );

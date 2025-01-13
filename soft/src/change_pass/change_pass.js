@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // ページ遷移用
 import styles from './change_pass.module.css'; // CSSモジュール(cssファイルかく)
+import fontstyles from '../font/font.module.css';
 
 const ChangePass = () => {
   //ここから下変える
@@ -56,14 +57,20 @@ const ChangePass = () => {
     //setErrorMessage('※間違っています。もう一度入力してください。');
     //}
   };
+  const inputStyle = {
+    fontFamily: 'CraftMincho, serif'
+  };
+
 
   return (
+    <div className={fontstyles.fontFamily}>
     <div className={styles.body}>
       <div className={styles.left}>
 
         <button   //トップページへ戻るボタン
           className={styles.topbutton}
           onClick={handleTop}
+          style={inputStyle}
         >
           トップページへ戻る
         </button>
@@ -85,6 +92,7 @@ const ChangePass = () => {
             className={styles.input}
             placeholder="今のメールアドレス"
             value={nowEmail}
+            style={inputStyle}
             onChange={(e) => setNowEmail(e.target.value)}
           />
         </div>
@@ -124,6 +132,7 @@ const ChangePass = () => {
         <button     //「OK」ボタン
           className={styles.okbutton}
           onClick={handleok}
+          style={inputStyle}
         >
           OK
         </button>
@@ -133,7 +142,7 @@ const ChangePass = () => {
         <div className={styles.advertisement2}>広告</div>
       </div>
     </div>
-
+    </div>
   );
 };
 

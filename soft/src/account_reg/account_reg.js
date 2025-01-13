@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom'; // ページ遷移用
 import styles from "./account_reg.module.css"; // CSSモジュールを使用
+import fontstyles from '../font/font.module.css';
 
 const AccountReg = () => {
   const navigate = useNavigate(); // ページ遷移用
@@ -29,8 +30,12 @@ const AccountReg = () => {
       navigate('/login'); // ログインページに移動
     }
   };
+  const inputStyle = {
+    fontFamily: 'CraftMincho, serif'
+  };
 
   return (
+    <div className={fontstyles.fontFamily}>
     <div className={styles.body}>
       <div className={styles.title}>会員情報登録</div>
 
@@ -46,6 +51,7 @@ const AccountReg = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            style={inputStyle}
           />
         </div>
 
@@ -62,6 +68,7 @@ const AccountReg = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
+            style={inputStyle}
           />
         </div>
 
@@ -101,6 +108,7 @@ const AccountReg = () => {
           <label htmlFor="comment">フリーコメント</label>
           <textarea
             className={styles.comment}
+            style={inputStyle}
             placeholder="ペットの性別や年齢、コメントなど(100文字以内)"
             value={comment}
             onChange={(e) => setComment(e.target.value)}
@@ -116,9 +124,11 @@ const AccountReg = () => {
         type="button"
         className={styles.okButton}
         onClick={handleOk}
+        style={inputStyle}
       >
         OK
       </button>
+    </div>
     </div>
   );
 };

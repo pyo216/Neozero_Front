@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './mail_change.module.css';
+import fontstyles from '../font/font.module.css';
 
 const MailChange = () => {
   const navigate = useNavigate();
@@ -36,11 +37,17 @@ const MailChange = () => {
     }));
   };
 
+  const inputStyle = {
+    fontFamily: 'CraftMincho, serif'
+  };
+
   return (
+    <div className={fontstyles.fontFamily}>
     <div className={styles.body}>
       <div className={styles.left}>
         <button
           className={styles['main-button']}
+          style={inputStyle}
           onClick={handleTop}
         >
           トップページへ戻る
@@ -60,6 +67,7 @@ const MailChange = () => {
           placeholder="今のメールアドレス"
           value={formData.currentEmail}
           onChange={handleInputChange}
+          style={inputStyle}
         />
         <input
           type="email"
@@ -67,6 +75,7 @@ const MailChange = () => {
           className={styles.input}
           placeholder="新しいメールアドレス"
           value={formData.newEmail}
+          style={inputStyle}
           onChange={handleInputChange}
         />
         <input
@@ -80,6 +89,7 @@ const MailChange = () => {
         <button
           className={styles.ok}
           onClick={handleOk}
+          style={inputStyle}
         >
           OK
         </button>
@@ -89,6 +99,7 @@ const MailChange = () => {
         <div className={styles.advertisement2}>
           広告
         </div>
+      </div>
       </div>
     </div>
   );
