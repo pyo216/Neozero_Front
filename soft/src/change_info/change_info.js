@@ -22,7 +22,7 @@ const ChangeInfo = () => {
 
   return (
     <div className={styles.body}>
-      <div cclassName={styles.left}>
+      <div className={styles.left}>
         <button // 「トップページへ戻る」ボタン
           className={styles.button}
           onClick={handletop}
