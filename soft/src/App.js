@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LoginPage from './login/login';  // ログインページ
+import Login from './login/login';  // ログインページ
 import TopPage from './top/top';  // トップページ
 import MyPage from'./mypage/mypage'; //マイページ
-import MemberPage from'./member/member'; //会員情報選択
+import Member from'./member/member'; //会員情報選択
 import Nyakama from'./nyakama/nyakama'; //にゃかま
 import Logout from'./logout/logout'; //ログアウト
 import Terms from'./terms/terms'; //利用規約
@@ -25,11 +25,11 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-        <Route path="/" element={<LoginPage/>} /> {/* 初期表示でログインページ */}
-          <Route path="/login" element={<LoginPage />} /> {/* ログインページ */}
+        <Route path="/" element={<Login/>} /> {/* 初期表示でログインページ */}
+          <Route path="/login" element={<Login />} /> {/* ログインページ */}
           <Route path="/top" element={<TopPage />} /> {/* トップページ */}
           <Route path="/mypage" element={<MyPage />} /> {/*マイページ */}
-          <Route path="/member" element={<MemberPage />} /> {/*会員情報選択*/}   
+          <Route path="/member" element={<Member />} /> {/*会員情報選択*/}   
           <Route path="/nyakama" element={<Nyakama />} /> {/*にゃかま*/}  
           <Route path="/mail_change" element={<MailChange />} /> {/*メールアドレス変更*/}
           <Route path="/logout" element={<Logout />} /> {/*ログアウト*/}

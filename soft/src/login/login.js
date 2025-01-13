@@ -1,9 +1,10 @@
+//ログインページ
 import React, { useState } from 'react'; //React,エラーメッセージ用
 import { useNavigate } from 'react-router-dom'; // ページ遷移用
 import styles from './login.module.css'; // CSSモジュール
 import pawloversImg from './pawlovers-side.jpg'; // PawLovers画像
 
-const LoginPage = () => {
+const Login = () => {
   const navigate = useNavigate(); // ページ遷移用
 
   const [email, setEmail] = useState(''); // メールアドレスの状態
@@ -85,4 +86,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default Login;

@@ -1,3 +1,4 @@
+//トップページ
 import React from 'react'; // React用
 import { useNavigate } from 'react-router-dom'; // ページ遷移用
 import styles from './top.module.css'; // CSSモジュール

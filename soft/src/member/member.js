@@ -1,10 +1,11 @@
+//会員情報選択画面
 import React from 'react'; // React用
 import { useNavigate } from 'react-router-dom'; // ページ遷移用
 import styles from './member.module.css'; // CSSモジュール
 
-const MemberPage = () => {
+const Member = () => {
   const navigate = useNavigate(); // ページ遷移用
-  
+
   const handleTop = () => { // 「トップページに戻る」ボタン押下
     navigate('/top'); // トップページに移動
   };
@@ -71,4 +72,4 @@ const MemberPage = () => {
   );
 };
 
-export default MemberPage;
+export default Member;
