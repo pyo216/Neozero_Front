@@ -34,7 +34,9 @@ const Nyakama = () => {
 
       <div className={styles.center}>
         <div className={styles.title}>nyakama</div>
-        <div className={styles.media}></div>
+        <div className={styles.media}>
+          
+        </div>
       </div>
 
       <div className={styles.right}>

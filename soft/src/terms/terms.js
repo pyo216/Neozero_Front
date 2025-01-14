@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-//利用規約画面
-=======
-//利用規約
->>>>>>> f378882e (変更)
+
+//利用規約画
 import React from 'react'; // React用
 import { useNavigate } from 'react-router-dom'; // ページ遷移用
 import styles from './terms.module.css'; // CSSモジュール(cssファイルかく)
