@@ -28,7 +28,7 @@ const ChangePass = () => {
 
   const handleok = () => { // 「OK」ボタン押下
     if (!nowEmail || !nowPassword || !newPassword || !newPasswordCon) {
-      setErrorMessage('※間違っています。もう一度入力してください。');
+      setErrorMessage('※入力に不備があります。');
       return;
     }
 
@@ -38,9 +38,15 @@ const ChangePass = () => {
       return;
     }
 
+    // 今のパスワードのバリデーション
+    if (!validatePassword(nowPassword)) {
+      setErrorMessage('※今のパスワードは半角英数字8～16文字で入力してください。');
+      return;
+    }
+
     // 新パスワードの一致確認
     if (newPassword !== newPasswordCon) {
-      setErrorMessage('※間違っています。もう一度入力してください。');
+      setErrorMessage('※再確認パスワードが一致しません。');
       return;
     }
 
@@ -105,6 +111,7 @@ const ChangePass = () => {
             value={nowPassword}
             onChange={(e) => setNowPassword(e.target.value)}
           />
+          <p className={styles.note}>※半角英数字8~16文字</p>
         </div>
 
         <div className={styles.inputContainer}>

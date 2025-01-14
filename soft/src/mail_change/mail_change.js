@@ -13,6 +13,11 @@ const MailChange = () => {
     currentPassword: ''
   });
 
+  const validatePassword = (password) => {
+    const passwordRegex = /^[a-zA-Z0-9]{8,16}$/;
+    return passwordRegex.test(password);
+  };
+
   const handleTop = () => {
     navigate('/top');
   };
@@ -20,13 +25,27 @@ const MailChange = () => {
   const handleOk = () => {
     const { currentEmail, newEmail, currentPassword } = formData;
 
-    if (!currentEmail || !newEmail || !currentPassword) {
-      setErrorMessage('※未入力欄があります。');
+    if (!currentEmail) {
+      setErrorMessage('※現在のメールアドレスを入力してください。');
       return;
-    } else {
-      //入力されてたら
-      navigate('/change_info');
     }
+
+    if (!newEmail) {
+      setErrorMessage('※新しいメールアドレスを入力してください。');
+      return;
+    }
+
+    if (!currentPassword) {
+      setErrorMessage('※パスワードを入力してください。');
+      return;
+    }
+
+    if (!validatePassword(currentPassword)) {
+      setErrorMessage('※パスワードは半角英数字8～16文字で入力してください。');
+      return;
+    }
+
+    navigate('/change_info');
   };
 
   const handleInputChange = (e) => {
@@ -86,6 +105,7 @@ const MailChange = () => {
           value={formData.currentPassword}
           onChange={handleInputChange}
         />
+         <span className={styles.passwordHint}>※半角英数字8～16文字</span>
         <button
           className={styles.ok}
           onClick={handleOk}

@@ -80,6 +80,12 @@
     color: #FFD5EC;
 }
 
+.passwordHint { 
+    right: 0;
+    font-size: smaller;
+    color: #777;
+}
+
 .p {
     height: 20px;
     color: red;
