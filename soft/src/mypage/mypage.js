@@ -2,6 +2,8 @@
 import React from 'react'; // React用
 import { useNavigate } from 'react-router-dom'; // ページ遷移用
 import styles from './mypage.module.css'; // CSSモジュール
+import fontstyles from '../font/font.module.css';
+
 
 const MyPage = () => {
   const navigate = useNavigate(); // ページ遷移用
@@ -22,8 +24,13 @@ const MyPage = () => {
     navigate('/member'); // 会員情報選択画面に移動
   };
 
+  const inputStyle = {
+    fontFamily: 'CraftMincho, serif'
+  };
+
 
   return (
+    <div className={fontstyles.fontFamily}>
     <div className={styles.body}>
 
       <div className={styles.left}>
@@ -31,6 +38,7 @@ const MyPage = () => {
         <button // 「トップページへ戻る」ボタン
           className={styles.topButton}
           onClick={handleTop}
+          style={inputStyle}
         >
           トップページへ戻る
         </button>
@@ -38,6 +46,7 @@ const MyPage = () => {
         <button // 「ペット情報変更」ボタン
           className={styles.petButton}
           onClick={handlePet}
+          style={inputStyle}
         >
           ペット情報変更
         </button>
@@ -45,6 +54,7 @@ const MyPage = () => {
         <button // 「Nyakama」ボタン
           className={styles.nyakamaButton}
           onClick={handleNyakama}
+          style={inputStyle}
         >
           Nyakama
         </button>
@@ -52,6 +62,7 @@ const MyPage = () => {
         <button // 「会員情報選択」ボタン
           className={styles.memberButton}
           onClick={handleMember}
+          style={inputStyle}
         >
           会員情報選択
         </button>
@@ -74,6 +85,7 @@ const MyPage = () => {
         <div className={styles.advertisement}>広告</div>
       </div>
 
+    </div>
     </div>
   );
 };

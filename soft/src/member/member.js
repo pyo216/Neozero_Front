@@ -2,6 +2,7 @@
 import React from 'react'; // React用
 import { useNavigate } from 'react-router-dom'; // ページ遷移用
 import styles from './member.module.css'; // CSSモジュール
+import fontstyles from '../font/font.module.css';
 
 const Member = () => {
   const navigate = useNavigate(); // ページ遷移用
@@ -22,7 +23,12 @@ const Member = () => {
     navigate('/account_con'); // アカウント消去画面に移動
   };
 
+  const inputStyle = {
+    fontFamily: 'CraftMincho, serif'
+  };
+
   return (
+    <div className={fontstyles.fontFamily}>
     <div className={styles.body}>
 
       <div className={styles.left}>
@@ -30,6 +36,7 @@ const Member = () => {
         <button // 「トップページへ戻る」ボタン
           className={styles.topButton}
           onClick={handleTop}
+          style={inputStyle}
         >
           トップページへ戻る
         </button>
@@ -45,6 +52,7 @@ const Member = () => {
         <button // 「会員情報変更」ボタン
           className={styles.changeButton}
           onClick={handleChange}
+          style={inputStyle}
         >
           会員情報変更
         </button>
@@ -52,6 +60,7 @@ const Member = () => {
         <button // 「ログアウト」ボタン
           className={styles.logoutButton}
           onClick={handleLogout}
+          style={inputStyle}
         >
           ログアウト
         </button>
@@ -59,6 +68,7 @@ const Member = () => {
         <button // 「アカウント消去」ボタン
           className={styles.accountButton}
           onClick={handleAccount}
+          style={inputStyle}
         >
           アカウント消去
         </button>
@@ -68,6 +78,7 @@ const Member = () => {
       <div className={styles.right}>
         <div className={styles.advertisement2}>広告</div>
       </div>
+    </div>
     </div>
   );
 };

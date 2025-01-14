@@ -2,6 +2,7 @@
 import React from 'react'; // React用
 import { useNavigate } from 'react-router-dom'; // ページ遷移用
 import styles from './nyakama.module.css'; // CSSモジュール(cssファイルかく)
+import fontstyles from '../font/font.module.css';
 
 const Nyakama = () => {
   const navigate = useNavigate(); // ページ遷移用
@@ -10,13 +11,20 @@ const Nyakama = () => {
     navigate('/top'); // トップページに移動
   };
 
+
+  const inputStyle = {
+    fontFamily: 'CraftMincho, serif'
+  };
+
   return (
+     <div className={fontstyles.fontFamily}>
     <div className={styles.body}>
 
       <div className={styles.left}>
         <button // 「トップページへ戻る」ボタン
           className={styles.topButton}
           onClick={handleTop}
+          style={inputStyle}
         >
           トップページへ戻る
         </button>
@@ -32,6 +40,7 @@ const Nyakama = () => {
       <div className={styles.right}>
         <div className={styles.advertisement2}>広告</div>
       </div>
+    </div>
     </div>
 
   );
