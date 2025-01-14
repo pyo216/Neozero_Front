@@ -1,3 +1,4 @@
+//利用規約画面
 import React from 'react'; // React用
 import { useNavigate } from 'react-router-dom'; // ページ遷移用
 /*
