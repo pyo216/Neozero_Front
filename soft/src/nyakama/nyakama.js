@@ -39,7 +39,7 @@ const Nyakama = () => {
         </div>
 
         <div className={styles.center}>
-          <div className={styles.title}>nyakama</div>
+          <div className={styles.title}>Nyakama</div>
           <div className={styles.media}>
 
 
