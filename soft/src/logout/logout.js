@@ -28,7 +28,7 @@ const Logout = () => {
   <div className={fontstyles.fontFamily}>
       <div className={styles.body}>
         <div className={styles.left}>
-          <button className={styles.topButton} onClick={handleTop}>トップページへ戻る</button>
+          <button className={styles.topButton} onClick={handleTop} style={inputStyle}>トップページへ戻る</button>
           <div className={styles.advertisement}>広告</div>
         </div>
 
@@ -36,8 +36,8 @@ const Logout = () => {
           <div className={styles.logout}>ログアウト</div>
           <div className={styles.white}>
             <p className={styles.message}>ログアウトするワン？</p>
-            <button className={styles.okButton} onClick={handleok}>はい</button>
-            <button className={styles.noButton} onClick={handleno}>いいえ</button>
+            <button className={styles.okButton} onClick={handleok} style={inputStyle}>はい</button>
+            <button className={styles.noButton} onClick={handleno} style={inputStyle}>いいえ</button>
           </div>
         </div>
 

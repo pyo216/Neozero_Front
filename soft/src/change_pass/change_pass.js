@@ -109,10 +109,11 @@ const ChangePass = () => {
 
         <div className={styles.inputContainer}>
           <input
-            type="password"
+            type="email"
             className={styles.input}
             placeholder="新しいパスワード"
             value={newPassword}
+            style={inputStyle}
             onChange={(e) => setNewPassword(e.target.value)}
           />
 
