@@ -1,19 +1,14 @@
-//トップページ
+//対象ユーザの投稿画面
 import React from 'react'; // React用
 import { useNavigate } from 'react-router-dom'; // ページ遷移用
-import styles from './top.module.css'; // CSSモジュール
+import styles from './other_users.module.css'; // CSSモジュール
 import fontstyles from '../font/font.module.css';
-import pawloverslogoImg from './pawlovers.png'; // PawLoversロゴ画像
 
-const TopPage = () => {
+const Other_users = () => {
   const navigate = useNavigate(); // ページ遷移用
 
-  const handlePost = () => { // 「投稿する」ボタン押下
-    navigate('/post'); // 投稿画面に移動
-  };
-
-  const handleMypage = () => { // 「マイページ」ボタン押下
-    navigate('/mypage'); // マイページに移動
+  const handleTop = () => { // 「トップページに戻る」ボタン押下
+    navigate('/top'); // トップページに移動
   };
 
   const handleFollow = () => { // 「フォロー」ボタン押下
@@ -22,42 +17,31 @@ const TopPage = () => {
   const handleReport = () => { // 「通報」ボタン押下
   };
 
+
   const inputStyle = {
     fontFamily: 'CraftMincho, serif'
   };
 
-
   return (
-    <div className={fontstyles.fontFamily}>
-      <div className={styles.body}>
+     <div className={fontstyles.fontFamily}>
+    <div className={styles.body}>
 
-        <div className={styles.above}>
-          <img
-            src={pawloverslogoImg} // PawLoversロゴ画像
-            alt="pawloverslogoImg" // 代替テキスト
-            className={styles.pawloverslogoImg}
-          />
+      <div className={styles.left}>
+        <button // 「トップページへ戻る」ボタン
+          className={styles.topButton}
+          onClick={handleTop}
+          style={inputStyle}
+        >
+          トップページへ戻る
+        </button>
 
-          <button // 「投稿する」ボタン
-            className={styles.postButton}
-            onClick={handlePost}
-            style={inputStyle}
-          >
-            投稿する
-          </button>
+        <div className={styles.advertisement}>広告</div>
+      </div>
 
-          <button // 「マイページ」ボタン
-            className={styles.mypageButton}
-            onClick={handleMypage}
-            style={inputStyle}
-          >
-            マイページ
-          </button>
+      <div className={styles.center}>
+        <div className={styles.title}>◯◯のページ
         </div>
-
-        <div className={styles.bottom}>
-          <div className={styles.advertisement}>広告</div>
-          <div className={styles.media}>
+        <div className={styles.media}>
             <div className={styles.white}>
               <div className={styles.post}>
                 <div className={styles.picture}>画像</div>
@@ -140,14 +124,14 @@ const TopPage = () => {
             </div>
             
           </div>
+      </div>
 
-          
-          <div className={styles.advertisement}>広告</div>
-        </div>
-
+      <div className={styles.right}>
+        <div className={styles.advertisement2}>広告</div>
       </div>
     </div>
-  );
-};
+    </div>
 
-export default TopPage;
+  );
+}
+export default Other_users;

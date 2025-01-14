@@ -1,73 +1,69 @@
 .body {
     min-height: 100vh; /* 高さ指定 */
-    text-align: center; /* 中央揃え */
-    font-size: medium; /* 文字の大きさ */
-    background: #FFD5EC; /* 背景色 */
+    background-color: #FFD5EC;
     display: flex;
-    align-items: center; /* 上下中央寄せ */
-    justify-content: center; /* 左右中央寄せ */
-}             
+    justify-content: center; 
+    align-items: center;    
+    margin: 0;              
+}
 
-.left, .right {
+.right {
+    flex: 1;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+}
+
+.left {
     flex: 1;
     display: flex;
-    flex-flow: column; /* 縦並び */
-    align-items: center; /* 上下中央寄せ */
-    justify-content: center; /* 左右中央寄せ */
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
 }
 
 .topButton {
-    height: 125px;
+    font-size: large;
     width: 90%; 
-    font-size: large; /* 文字の大きさ */ 
-    border: none; /* 枠線 */
-    border-radius: 30px; /* 丸み */
-    background: #fff; /* 背景色 */
-    margin-bottom: 40px; /* 上の余白(外側) */
-    cursor: pointer; /* カーソル変更 */   
+    height: 125px;
+    background: #ffffff;  
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;  
+    margin-bottom: 40px;    
 }
 
 .topButton:hover {
-    background: #c0c0c0; /* 背景色 */
-}
-
-.petButton, .nyakamaButton, .memberButton {
-    height: 100px;
-    width: 90%; 
-    font-size: large; /* 文字の大きさ */
-    border: none; /* 枠線削除 */
-    border-radius: 30px; /* 丸み */
-    background: #b09bd1; /* 背景色 */
-    margin-bottom: 40px; /* 上の余白(外側) */
-    cursor: pointer;    
-}
-
-.petButton:hover, .nyakamaButton:hover, .memberButton:hover {
-    background: #9a88c7; /* 背景色 */
+    background: #c3a8ca; 
 }
 
 .inquiry {
-    width: 90%;
-    background: #fff; /* 背景色 */
-    padding: 35px 0; /* 上下左右の余白(内側) */
+    width: 90%; 
+    padding: 35px 0;
+    background: #ffffff;
+    margin: 0 auto;
 }
 
 .center {
     flex: 3;
     display: flex;
-    flex-flow: column; /* 縦並び */
-    align-items: center; /* 上下中央寄せ */
-    justify-content: center; /* 左右中央寄せ */
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
 }
 
 .title {
+    text-align: center;
+    margin: 40px auto;
+    border-radius: 30px;
+    padding: 10px 0;
     width: 50%;
-    font-size: xx-large; /* 文字の大きさ */ 
-    border-radius: 30px; /* 丸み */
-    color: #FFD5EC; /* 文字の色 */
-    background: #fff; /* 背景色 */
-    padding: 10px 0; /* 上下左右の余白(内側) */         
-    margin: 40px auto; /* 上下左右の余白(外側) */         
+    border: solid 1px;
+    font-size: xx-large;
+    background: #ffffff;
+    color: #FFD5EC;
 }
 
 .media{
@@ -179,4 +175,21 @@
     width: 90%;   
     border: 1px solid #000; /* 枠線 */ 
     margin-top: 20px; /* 上の余白(外側) */       
+}
+
+
+.advertisement {
+    width: 90%; 
+    height: 550px;
+    text-align: center;
+    border: 1px solid;
+}
+
+
+.advertisement2 {
+    width: 90%; 
+    height: 750px;
+    margin-top: 20px;    
+    text-align: center;
+    border: 1px solid;
 }
