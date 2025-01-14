@@ -90,7 +90,9 @@
 
 .white{
     background: #ffffff; 
+    font-size: x-large; /* 文字の大きさ */
     width: 70%;
+    padding-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
