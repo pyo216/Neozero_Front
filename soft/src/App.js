@@ -7,6 +7,7 @@ import Member from'./member/member'; //会員情報選択
 import Nyakama from'./nyakama/nyakama'; //にゃかま
 import Logout from'./logout/logout'; //ログアウト
 import Terms from'./terms/terms'; //利用規約
+import Use from'./use/use'; //利用規約詳細
 import RmAccount from'./account_rm/account_rm'; //アカウント消去
 import AccountCon from'./account_con/account_con'; //アカウント消去確認
 import MailChange from'./mail_change/mail_change'; //メールアドレス変更
@@ -35,6 +36,7 @@ function App() {
           <Route path="/mail_change" element={<MailChange />} /> {/*メールアドレス変更*/}
           <Route path="/logout" element={<Logout />} /> {/*ログアウト*/}
           <Route path="/terms" element={<Terms />} /> {/*利用規約*/}
+          <Route path="/use" element={<Use />} /> {/* 利用規約詳細 */}
           <Route path="/account_rm" element={<RmAccount />} /> {/*アカウント消去*/}   
           <Route path="/account_con" element={<AccountCon />} /> {/*アカウント消去確認*/}
           <Route path="/account_reg" element={<AccountReg />} /> {/*アカウント登録*/}

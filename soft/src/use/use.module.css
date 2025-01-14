@@ -23,7 +23,7 @@
 }
 
 .button {
-    height: 80px;
+    height: 50px;
     width: 80%;
     border-radius: 30px;
     background: #FFD5EC;
@@ -32,22 +32,6 @@
     margin: 20px 0;
     border: none;
     cursor: pointer;
-}
-
-.use {
-    height: 20px;
-    width: 80%;
-    border-radius: 30px;
-    background: #99CCCC;
-    font-size: large;
-    color: #000000;
-    margin: 20px 0;
-    border: none;
-    cursor: pointer;
-}
-
-.use:hover {
-    background: #cbe1e1;
 }
 
 .button:hover {

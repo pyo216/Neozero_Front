@@ -1,39 +1,58 @@
-//利用規約
-import React from 'react'; // React用
-import { useNavigate } from 'react-router-dom'; // ページ遷移用
-import styles from './terms.module.css'; // CSSモジュール(cssファイルかく)
+//利用規約同意画面
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import styles from './terms.module.css';
+import fontstyles from '../font/font.module.css';
+import pawloverslogo from './pawlovers.png';
 
+const Terms = () => {
+  const navigate = useNavigate();
 
-const Post = () => {
-    //ここから下変える
-const navigate = useNavigate(); // ページ遷移用
-const handleTop = () => { //「同意」ボタン押下 
-  navigate('/top'); // トップページに移動
+  const handleTop = () => {
+    navigate('/account_reg');
+  };
+
+  const handleUse = () => {
+    navigate('/use');
+  };
+
+  return (
+    <div className={fontstyles.fontFamily}>
+      <div className={styles.body}>
+        <div className={styles.term}>利用規約</div>
+
+        <div className={styles.context}>
+        <button
+          onClick={handleUse}
+          className={`${styles.use} ${fontstyles.fontFamily}`}
+        >
+          利用規約の閲覧
+        </button>
+          <p>
+            本サービスを利用してくれて
+            <br />ありがとニャン！<br />
+            ぜひこのサービスで色々な動物たちと<br />
+            出会ってくれると嬉しいワン！
+          </p>
+          <p>NeoZero.Inc</p>
+          <img
+          src={pawloverslogo}
+          alt="pawloverslogo"
+          className={styles.pawloversLogo}
+        />
+        </div>
+
+        <button
+          onClick={handleTop}
+          className={`${styles.button} ${fontstyles.fontFamily}`}
+        >
+          利用規約に同意して次に進む
+        </button>
+
+        
+      </div>
+    </div>
+  );
 };
-return (
-  <div className={styles.body}>
 
-  <p>&nbsp;</p>  
-
-  <div className={styles.term}>利用規約 </div>
-
-  <p>&nbsp;</p>   
-
-  <div className={styles.context}>
-      <p>&nbsp;</p>
-      利用規約<br/>本サービスを利用してくれてありがとニャン！<br/>ぜひこのサービスで色々な動物たちと<br/>出会ってくれると嬉しいワン！
-      <p>&nbsp;</p>
-      NeoZero.Inc
-      <p>&nbsp;</p>
-  </div>
-
-  <p id="error-message">　</p>
-  <button   //「OK」ボタン
-    className={styles.ok}
-    onClick={handleTop}>利用規約に同意して次に進む</button>
-
-
-</div>
-    );
-};
-export default Post;
+export default Terms;
