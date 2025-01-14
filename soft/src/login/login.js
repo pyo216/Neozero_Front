@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './login.module.css';
 import fontstyles from '../font/font.module.css';
@@ -10,6 +10,24 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+
+  useEffect(() => {
+    const handlePopState = (event) => {
+      // 戻る操作があった場合に / に遷移
+      navigate('/');
+    };
+    // 初期状態でも履歴のpushStateを使って、ブラウザバック操作ができないように
+    window.history.pushState(null, document.title, window.location.href);
+    
+    // popstateイベントリスナーを追加
+    window.addEventListener('popstate', handlePopState);
+
+    // クリーンアップ処理
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, [navigate]);
+
 
   const handleLogin = () => {
     if (!email) {
