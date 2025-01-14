@@ -10,18 +10,29 @@ const RmAccount = () => {
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
+  const validatePassword = (password) => {
+    const passwordRegex = /^[a-zA-Z0-9]{8,16}$/;
+    return passwordRegex.test(password);
+  };
+
   const handleOkClick = () => {
     if (!email || !password) {
       setErrorMessage('※入力に不備があります。');
       return;
     }
 
+    if (!validatePassword(password)) {
+      setErrorMessage('※パスワードは半角英数字8～16文字で入力してください。');
+      return;
+    }
+
     //if (email === 'admin@example.com' && password === 'password123') {
-    navigate('/');
+    navigate('/account_con');
     //} else {
     //setErrorMessage('※間違っています。もう一度入力してください。');
     //}
   };
+
 
   const handleTopClick = () => {
     navigate('/top');
@@ -63,6 +74,11 @@ const RmAccount = () => {
             className={styles.input}
             placeholder="パスワード"
           />
+
+          <p className={styles.passwordHint}>
+            ※半角英数字8～16文字
+          </p>
+
           <button
             type="button"
             onClick={handleOkClick}

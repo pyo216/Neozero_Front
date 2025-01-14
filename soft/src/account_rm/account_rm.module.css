@@ -85,6 +85,12 @@
     color: red;
 }
 
+.passwordHint{
+    right: 0;
+    font-size: smaller;
+    color: #777;
+}
+
 .advertisement {
     width: 90%; 
     height: 550px;

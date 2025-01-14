@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './login.module.css';
 import fontstyles from '../font/font.module.css';
@@ -18,7 +18,7 @@ const Login = () => {
     };
     // 初期状態でも履歴のpushStateを使って、ブラウザバック操作ができないように
     window.history.pushState(null, document.title, window.location.href);
-    
+
     // popstateイベントリスナーを追加
     window.addEventListener('popstate', handlePopState);
 
@@ -28,18 +28,29 @@ const Login = () => {
     };
   }, [navigate]);
 
+  const validatePassword = (password) => {
+    const passwordRegex = /^[a-zA-Z0-9]{8,16}$/;
+    return passwordRegex.test(password);
+  };
 
   const handleLogin = () => {
     if (!email) {
       setErrorMessage('※メールアドレスを入力してください。');
       return;
-    } else if (!password) {
+    }
+
+    if (!password) {
       setErrorMessage('※パスワードを入力してください。');
       return;
-    } else {
-      setErrorMessage('');
-      navigate('/top');
     }
+
+    if (!validatePassword(password)) {
+      setErrorMessage('※パスワードは半角英数字8～16文字で入力してください。');
+      return;
+    }
+
+    setErrorMessage('');
+    navigate('/top');
   };
 
   const handleRegister = () => {
@@ -83,6 +94,9 @@ const Login = () => {
               placeholder="パスワードを入力してください"
               required
             />
+            <p className={styles.passwordHint}>
+              ※半角英数字8～16文字
+            </p>
           </div>
 
           {errorMessage && (

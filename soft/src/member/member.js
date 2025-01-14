@@ -20,7 +20,7 @@ const Member = () => {
   };
 
   const handleAccount = () => { // 「アカウント消去」ボタン押下
-    navigate('/account_con'); // アカウント消去画面に移動
+    navigate('/account_rm'); // アカウント消去画面に移動
   };
 
   const inputStyle = {
