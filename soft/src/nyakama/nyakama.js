@@ -11,38 +11,93 @@ const Nyakama = () => {
     navigate('/top'); // トップページに移動
   };
 
+  const handleRefollow = () => { // 「フォロー」ボタン押下
+  };
 
   const inputStyle = {
     fontFamily: 'CraftMincho, serif'
   };
 
   return (
-     <div className={fontstyles.fontFamily}>
-    <div className={styles.body}>
+    <div className={fontstyles.fontFamily}>
+      <div className={styles.body}>
 
-      <div className={styles.left}>
-        <button // 「トップページへ戻る」ボタン
-          className={styles.topButton}
-          onClick={handleTop}
-          style={inputStyle}
-        >
-          トップページへ戻る
-        </button>
+        <div className={styles.left}>
+          <button // 「トップページへ戻る」ボタン
+            className={styles.topButton}
+            onClick={handleTop}
+            style={inputStyle}
+          >
+            トップページへ戻る
+          </button>
 
-        <div className={styles.advertisement}>広告</div>
-      </div>
+          <div className={styles.advertisement}>広告</div>
+        </div>
 
-      <div className={styles.center}>
-        <div className={styles.title}>nyakama</div>
-        <div className={styles.media}>
-          
+        <div className={styles.center}>
+          <div className={styles.title}>nyakama</div>
+          <div className={styles.media}>
+
+
+            <div className={styles.white}>
+              <div className={styles.photo}>画像</div>
+              <div className={styles.info}>
+                <div className={styles.detail}>
+                  <div className={styles.name}>はすざき</div>
+                  <button
+                    className={styles.refollowButton}
+                    onClick={handleRefollow}
+                    style={inputStyle}
+                  >
+                    フォロー解除
+                  </button>
+                </div>
+                <div className={styles.comment}>コメント</div>
+              </div>
+            </div>
+
+            <div className={styles.white}>
+              <div className={styles.photo}>画像</div>
+              <div className={styles.info}>
+                <div className={styles.detail}>
+                  <div className={styles.name}>こぎた</div>
+                  <button
+                    className={styles.refollowButton}
+                    onClick={handleRefollow}
+                    style={inputStyle}
+                  >
+                    フォロー解除
+                  </button>
+                </div>
+                <div className={styles.comment}>コメント</div>
+              </div>
+            </div>
+
+            <div className={styles.white}>
+              <div className={styles.photo}>画像</div>
+              <div className={styles.info}>
+                <div className={styles.detail}>
+                  <div className={styles.name}>といぷ</div>
+                  <button
+                    className={styles.refollowButton}
+                    onClick={handleRefollow}
+                    style={inputStyle}
+                  >
+                    フォロー解除
+                  </button>
+                </div>
+                <div className={styles.comment}>コメント</div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+        <div className={styles.right}>
+          <div className={styles.advertisement2}>広告</div>
         </div>
       </div>
-
-      <div className={styles.right}>
-        <div className={styles.advertisement2}>広告</div>
-      </div>
-    </div>
     </div>
 
   );

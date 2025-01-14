@@ -24,10 +24,8 @@ const MyPage = () => {
     navigate('/member'); // 会員情報選択画面に移動
   };
 
-  const handleFollow = () => { // 「フォロー」ボタン押下
-  };
-
-  const handleReport = () => { // 「通報」ボタン押下
+  const handleErase = () => { // 「投稿消去」ボタン押下
+    navigate('/deletion'); // 投稿消去画面に移動
   };
 
   const inputStyle = {
@@ -88,25 +86,18 @@ const MyPage = () => {
               <div className={styles.post}>
                 <div className={styles.picture}>画像</div>
                 <div className={styles.info}>
-                  <button
-                    className={styles.followButton}
-                    onClick={handleFollow}
+                <button
+                    className={styles.eraseButton}
+                    onClick={handleErase}
                     style={inputStyle}
                   >
-                    フォロー
+                    投稿消去
                   </button>
                   <div className={styles.push}>
                     <div className={styles.good}>いいね</div>
                     <div className={styles.money}>スパチャ</div>
                   </div>
                   <div className={styles.comment}>コメント</div>
-                  <button
-                    className={styles.reportButton}
-                    onClick={handleReport}
-                    style={inputStyle}
-                  >
-                    通報
-                  </button>
                 </div>
               </div>
             </div>
@@ -116,24 +107,17 @@ const MyPage = () => {
                 <div className={styles.picture}>画像</div>
                 <div className={styles.info}>
                   <button
-                    className={styles.followButton}
-                    onClick={handleFollow}
+                    className={styles.eraseButton}
+                    onClick={handleErase}
                     style={inputStyle}
                   >
-                    フォロー
+                    投稿消去
                   </button>
                   <div className={styles.push}>
                     <div className={styles.good}>いいね</div>
                     <div className={styles.money}>スパチャ</div>
                   </div>
                   <div className={styles.comment}>コメント</div>
-                  <button
-                    className={styles.reportButton}
-                    onClick={handleReport}
-                    style={inputStyle}
-                  >
-                    通報
-                  </button>
                 </div>
               </div>
             </div>
@@ -142,25 +126,18 @@ const MyPage = () => {
               <div className={styles.post}>
                 <div className={styles.picture}>画像</div>
                 <div className={styles.info}>
-                  <button
-                    className={styles.followButton}
-                    onClick={handleFollow}
+                <button
+                    className={styles.eraseButton}
+                    onClick={handleErase}
                     style={inputStyle}
                   >
-                    フォロー
+                    投稿消去
                   </button>
                   <div className={styles.push}>
                     <div className={styles.good}>いいね</div>
                     <div className={styles.money}>スパチャ</div>
                   </div>
                   <div className={styles.comment}>コメント</div>
-                  <button
-                    className={styles.reportButton}
-                    onClick={handleReport}
-                    style={inputStyle}
-                  >
-                    通報
-                  </button>
                 </div>
               </div>
             </div>

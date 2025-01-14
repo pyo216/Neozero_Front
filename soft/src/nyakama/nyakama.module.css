@@ -67,9 +67,78 @@
 }
 
 .media {
+    min-height: 650px; /* 最大高さを設定 */
+    max-height: 650px; /* 最大高さを設定 */
+    background: #b09bd1; /* 背景色 */
     width: 90%; 
-    height: 650px;
     border: 1px solid;
+    overflow-y: auto; /* 縦方向にスクロール可能に */   
+    overflow-x: hidden;     
+}
+
+.white{
+    border: 1px solid #000; /* 枠線 */ 
+    background: #fff; /* 背景色 */
+    margin: 10px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.photo{
+    flex: 2;
+    height: 200px; /* 最大高さを設定 */
+    border: 1px solid #000; /* 枠線 */ 
+    margin: 10px;
+}
+
+.info{
+    flex: 3;
+    width: 100%;
+    display: flex;
+    flex-flow: column; /* 縦並び */
+    align-items: center; /* 上下中央寄せ */
+    justify-content: center; /* 左右中央寄せ */
+}
+
+.detail{
+    width: 100%;
+    display: flex;
+    align-items: center; /* 上下中央寄せ */
+    justify-content: center; /* 左右中央寄せ */
+}
+
+.name {
+    height: 50px;
+    width: 80%;
+    text-align: center; /* 中央揃え */
+    background: #b09bd1; /* 背景色 */
+    border-radius: 30px;
+    margin: 10px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.refollowButton{
+    height: 50px;
+    width: 30%;
+    border: none; /* 枠線削除 */
+    cursor: pointer; /* カーソル変更 */
+    background: #FFD5EC; /* 背景色 */
+    border-radius: 30px; 
+    margin: 10px;
+}
+
+.refollowButton:hover {
+    background: #ff99cc; /* 背景色 */
+}
+
+.comment{
+    width: 90%;
+    background: #fff; /* 背景色 */
+    height: 130px;
+    border: 1px solid #000; /* 枠線 */ 
 }
 
 .advertisement {

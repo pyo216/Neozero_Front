@@ -13,7 +13,7 @@ const Deletion = () => {
   };
 
   const handledeletion = () => { //「消去」ボタン押下 
-    navigate('/deletion'); // 投稿消去画面に移動
+    navigate('/mypage'); // マイページに移動
   };
 
   const inputStyle = {

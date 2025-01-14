@@ -37,6 +37,7 @@
     text-align: center;
     margin: 40px auto;
     border-radius: 30px;
+    border: none; /* 枠線 */
     padding: 10px 0;
     width: 50%;
     background: #ff8d78;
