@@ -18,8 +18,8 @@ import Deletion from'./deletion/deletion'; //投稿消去画面
 import PetCon from './pet_con/pet_con'; //ペット変更確認画面
 import PetChange from './pet_change/pet_change'; //ペット変更画面
 import Post from './post/post'; //投稿画面
-import Other_users from './other_users/other_users'; //投稿画面
-
+import OtherUsers from './other_users/other_users'; //他ユーザ投稿閲覧画面
+import ReportCon from './report_con/report_con'; //アカウント通報確認画面
 
 
 function App() {
@@ -46,7 +46,8 @@ function App() {
           <Route path="/pet_con" element={<PetCon/>} /> {/*ペット変更確認画面*/}
           <Route path="/pet_change" element={<PetChange/>} /> {/*ペット変更画面*/}
           <Route path="/post" element={<Post/>} /> {/*投稿画面*/}
-          <Route path="/other_users" element={<Other_users/>} /> {/*投稿画面*/}
+          <Route path="/other_users" element={<OtherUsers/>} /> {/*他ユーザ投稿閲覧画面*/}
+          <Route path="/report_con" element={<ReportCon/>} /> {/*投稿画面*/}
         </Routes>
       </div>
     </Router>
