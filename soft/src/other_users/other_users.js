@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'; // ページ遷移用
 import styles from './other_users.module.css'; // CSSモジュール
 import fontstyles from '../font/font.module.css';
 
-const Other_users = () => {
+const OtherUsers = () => {
   const navigate = useNavigate(); // ページ遷移用
 
   const handleTop = () => { // 「トップページに戻る」ボタン押下
@@ -15,6 +15,7 @@ const Other_users = () => {
   };
 
   const handleReport = () => { // 「通報」ボタン押下
+    navigate('/report_con'); 
   };
 
 
@@ -134,4 +135,4 @@ const Other_users = () => {
 
   );
 }
-export default Other_users;
+export default OtherUsers;

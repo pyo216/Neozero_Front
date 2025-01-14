@@ -14,6 +14,10 @@ const Nyakama = () => {
   const handleRefollow = () => { // 「フォロー」ボタン押下
   };
 
+  const handleUser = () => { // 「ユーザ名」ボタン押下
+    navigate('/other_users'); // 他ユーザ投稿閲覧画面
+  };
+
   const inputStyle = {
     fontFamily: 'CraftMincho, serif'
   };
@@ -43,7 +47,13 @@ const Nyakama = () => {
               <div className={styles.photo}>画像</div>
               <div className={styles.info}>
                 <div className={styles.detail}>
-                  <div className={styles.name}>はすざき</div>
+                  <button // 「ユーザ名」ボタン
+                    className={styles.name}
+                    onClick={handleUser}
+                    style={inputStyle}
+                  >
+                    はすざき
+                  </button>
                   <button
                     className={styles.refollowButton}
                     onClick={handleRefollow}
@@ -60,7 +70,13 @@ const Nyakama = () => {
               <div className={styles.photo}>画像</div>
               <div className={styles.info}>
                 <div className={styles.detail}>
-                  <div className={styles.name}>こぎた</div>
+                <button // 「ユーザ名」ボタン
+                    className={styles.name}
+                    onClick={handleUser}
+                    style={inputStyle}
+                  >
+                    こぎた
+                  </button>
                   <button
                     className={styles.refollowButton}
                     onClick={handleRefollow}
@@ -77,7 +93,13 @@ const Nyakama = () => {
               <div className={styles.photo}>画像</div>
               <div className={styles.info}>
                 <div className={styles.detail}>
-                  <div className={styles.name}>といぷ</div>
+                <button // 「ユーザ名」ボタン
+                    className={styles.name}
+                    onClick={handleUser}
+                    style={inputStyle}
+                  >
+                    といぷ
+                  </button>
                   <button
                     className={styles.refollowButton}
                     onClick={handleRefollow}

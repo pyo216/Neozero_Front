@@ -20,6 +20,7 @@ const TopPage = () => {
   };
 
   const handleReport = () => { // 「通報」ボタン押下
+    navigate('/report_con'); // アカウント通報画面に移動
   };
 
   const inputStyle = {

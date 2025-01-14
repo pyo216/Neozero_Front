@@ -113,11 +113,14 @@
     width: 80%;
     text-align: center; /* 中央揃え */
     background: #b09bd1; /* 背景色 */
+    border: none;
+    cursor: pointer;
     border-radius: 30px;
     margin: 10px;
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
+}
+
+.name:hover {
+    background: #9a88c7; /* 背景色 */
 }
 
 .refollowButton{
