@@ -17,7 +17,7 @@ const RmAccount = () => {
     }
 
     //if (email === 'admin@example.com' && password === 'password123') {
-    navigate('/login');
+    navigate('/');
     //} else {
     //setErrorMessage('※間違っています。もう一度入力してください。');
     //}

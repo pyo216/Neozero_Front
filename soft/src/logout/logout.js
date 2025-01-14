@@ -12,7 +12,7 @@ const Logout = () => {
   };
 
   const handleok = () => { //「 はい」ボタン押下 
-    navigate('/login'); // はいのページ
+    navigate('/'); // はいのページ
   };
 
   const handleno = () => { //「いいえ」ボタン押下 
