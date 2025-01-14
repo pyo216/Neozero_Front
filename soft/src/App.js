@@ -26,7 +26,7 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-        <Route path="/" element={<Other_users/>} /> {/* 初期表示でログインページ */}
+        <Route path="/" element={<Login/>} /> {/* 初期表示でログインページ */}
           <Route path="/login" element={<Login />} /> {/* ログインページ */}
           <Route path="/top" element={<TopPage />} /> {/* トップページ */}
           <Route path="/mypage" element={<MyPage />} /> {/*マイページ */}
