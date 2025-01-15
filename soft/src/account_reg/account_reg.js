@@ -20,15 +20,25 @@ const AccountReg = () => {
     if (!email || !name || !password || !passwordConfirm) {
       setErrorMessage("※必須項目が入力されていません。");
       return;
-    } else if (!passwordRegex.test(password) || comment.length > 100) {
-      setErrorMessage("※パスワードまたはフリーコメントの制限が守られていません。");
+    }
+
+    if (!passwordRegex.test(password)) {
+      setErrorMessage("※パスワードは半角英数字8~16文字で入力してください。");
       return;
-    } else if (password !== passwordConfirm) {
+    }
+
+    if (password !== passwordConfirm) {
       setErrorMessage("※パスワードが一致しません。");
       return;
-    } else {
-      navigate('/login'); // ログインページに移動
     }
+
+    if (comment.length > 100) {
+      setErrorMessage("※フリーコメントは100文字以内で入力してください。");
+      return;
+    }
+
+    setErrorMessage("");
+    navigate('/'); // ログインページに移動
   };
   const inputStyle = {
     fontFamily: 'CraftMincho, serif'
@@ -36,99 +46,99 @@ const AccountReg = () => {
 
   return (
     <div className={fontstyles.fontFamily}>
-    <div className={styles.body}>
-      <div className={styles.title}>会員情報登録</div>
+      <div className={styles.body}>
+        <div className={styles.title}>会員情報登録</div>
 
-      <form className={styles.form}>
-        {/* メールアドレス */}
-        <div className={styles.item}>
-          <label htmlFor="email">
-            メールアドレス<span>※</span>
-          </label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            style={inputStyle}
-          />
-        </div>
+        <form className={styles.form}>
+          {/* メールアドレス */}
+          <div className={styles.item}>
+            <label htmlFor="email">
+              メールアドレス<span>※</span>
+            </label>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              style={inputStyle}
+            />
+          </div>
 
-        {/* ニックネーム */}
-        <div className={styles.item}>
-          <label htmlFor="name">
-            ニックネーム<span>※</span>
-            <br />
-            (ペットの名前)
-          </label>
-          <input
-            type="text"
-            id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-            style={inputStyle}
-          />
-        </div>
+          {/* ニックネーム */}
+          <div className={styles.item}>
+            <label htmlFor="name">
+              ニックネーム<span>※</span>
+              <br />
+              (ペットの名前)
+            </label>
+            <input
+              type="text"
+              id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+              style={inputStyle}
+            />
+          </div>
 
-        {/* パスワード */}
-        <div className={styles.item}>
-          <label htmlFor="password">
-            パスワード<span>※</span>
-          </label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
+          {/* パスワード */}
+          <div className={styles.item}>
+            <label htmlFor="password">
+              パスワード<span>※</span>
+            </label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
 
-        {/* パスワード確認 */}
-        <p className={styles.note}>※半角英数字8~16文字</p>
-        <div className={styles.item}>
-          <label htmlFor="passwordConfirm">
-            パスワード<span>※</span>
-            <br />
-            (再確認)
-          </label>
-          <input
-            type="password"
-            id="passwordConfirm"
-            value={passwordConfirm}
-            onChange={(e) => setPasswordConfirm(e.target.value)}
-            required
-          />
-        </div>
+          {/* パスワード確認 */}
+          <p className={styles.note}>※半角英数字8~16文字</p>
+          <div className={styles.item}>
+            <label htmlFor="passwordConfirm">
+              パスワード<span>※</span>
+              <br />
+              (再確認)
+            </label>
+            <input
+              type="password"
+              id="passwordConfirm"
+              value={passwordConfirm}
+              onChange={(e) => setPasswordConfirm(e.target.value)}
+              required
+            />
+          </div>
 
-        {/* フリーコメント */}
-        <div className={styles.item}>
-          <label htmlFor="comment">フリーコメント</label>
-          <textarea
-            className={styles.comment}
-            style={inputStyle}
-            placeholder="ペットの性別や年齢、コメントなど(100文字以内)"
-            value={comment}
-            onChange={(e) => setComment(e.target.value)}
-          />
-        </div>
-      </form>
+          {/* フリーコメント */}
+          <div className={styles.item}>
+            <label htmlFor="comment">フリーコメント</label>
+            <textarea
+              className={styles.comment}
+              style={inputStyle}
+              placeholder="ペットの性別や年齢、コメントなど(100文字以内)"
+              value={comment}
+              onChange={(e) => setComment(e.target.value)}
+            />
+          </div>
+        </form>
 
-      {/* エラーメッセージ */}
-      <p className={styles.errorMessage}>{errorMessage}</p>
+        {/* エラーメッセージ */}
+        <p className={styles.errorMessage}>{errorMessage}</p>
 
-      {/* OKボタン */}
-      <button
-        type="button"
-        className={styles.okButton}
-        onClick={handleOk}
-        style={inputStyle}
-      >
-        OK
-      </button>
-    </div>
+        {/* OKボタン */}
+        <button
+          type="button"
+          className={styles.okButton}
+          onClick={handleOk}
+          style={inputStyle}
+        >
+          OK
+        </button>
+      </div>
     </div>
   );
 };

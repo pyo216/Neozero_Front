@@ -27,30 +27,44 @@ const ChangePass = () => {
   };
 
   const handleok = () => { // 「OK」ボタン押下
-    if (!nowEmail || !nowPassword || !newPassword || !newPasswordCon) {
-      setErrorMessage('※入力に不備があります。');
+
+    if (!nowEmail) {
+      setErrorMessage('※現在のメールアドレスを入力してください。');
       return;
     }
 
-    // 新パスワードのバリデーション
+    // 現在のパスワードのチェック
+    if (!nowPassword) {
+      setErrorMessage('※現在のパスワードを入力してください。');
+      return;
+    }
+
+    // パスワードの形式チェック（現在のパスワード）
+    if (!validatePassword(nowPassword)) {
+      setErrorMessage('※現在のパスワードは半角英数字8～16文字で入力してください。');
+      return;
+    }
+
+
+    // 新しいパスワードのチェック
+    if (!newPassword) {
+      setErrorMessage('※新しいパスワードを入力してください。');
+      return;
+    }
+
+    // パスワードの形式チェック（新しいパスワード）
     if (!validatePassword(newPassword)) {
       setErrorMessage('※新しいパスワードは半角英数字8～16文字で入力してください。');
       return;
     }
 
-    // 今のパスワードのバリデーション
-    if (!validatePassword(nowPassword)) {
-      setErrorMessage('※今のパスワードは半角英数字8～16文字で入力してください。');
-      return;
-    }
-
-    // 新パスワードの一致確認
+    // パスワードの一致確認
     if (newPassword !== newPasswordCon) {
-      setErrorMessage('※再確認パスワードが一致しません。');
+      setErrorMessage('※パスワードが一致しません。');
       return;
     }
 
-    // パスワードが現在のパスワードと同じ場合はエラー
+    // 同一パスワードチェック
     if (newPassword === nowPassword) {
       setErrorMessage('※新しいパスワードは現在のパスワードと異なるものを設定してください。');
       return;
@@ -67,89 +81,88 @@ const ChangePass = () => {
     fontFamily: 'CraftMincho, serif'
   };
 
-
   return (
     <div className={fontstyles.fontFamily}>
-    <div className={styles.body}>
-      <div className={styles.left}>
+      <div className={styles.body}>
+        <div className={styles.left}>
 
-        <button   //トップページへ戻るボタン
-          className={styles.topbutton}
-          onClick={handleTop}
-          style={inputStyle}
-        >
-          トップページへ戻る
-        </button>
-
-        <div className={styles.advertisement}>広告</div>
-      </div>
-
-      <div className={styles.center}>
-        <div className={styles.password}>パスワード変更</div>
-
-        {/* エラーメッセージ表示 */}
-        {errorMessage && (
-          <p className={styles.errorMessage}>{errorMessage}</p>
-        )}
-
-        <div className={styles.inputContainer}>
-          <input
-            type="email"
-            className={styles.input}
-            placeholder="今のメールアドレス"
-            value={nowEmail}
+          <button   //トップページへ戻るボタン
+            className={styles.topbutton}
+            onClick={handleTop}
             style={inputStyle}
-            onChange={(e) => setNowEmail(e.target.value)}
-          />
+          >
+            トップページへ戻る
+          </button>
+
+          <div className={styles.advertisement}>広告</div>
         </div>
 
-        <div className={styles.inputContainer}>
-          <input
-            type="password"
-            className={styles.input}
-            placeholder="今のパスワード"
-            value={nowPassword}
-            onChange={(e) => setNowPassword(e.target.value)}
-          />
-          <p className={styles.note}>※半角英数字8~16文字</p>
-        </div>
+        <div className={styles.center}>
+          <div className={styles.password}>パスワード変更</div>
 
-        <div className={styles.inputContainer}>
-          <input
-            type="email"
-            className={styles.input}
-            placeholder="新しいパスワード"
-            value={newPassword}
+          {/* エラーメッセージ表示 */}
+          {errorMessage && (
+            <p className={styles.errorMessage}>{errorMessage}</p>
+          )}
+
+          <div className={styles.inputContainer}>
+            <input
+              type="email"
+              className={styles.input}
+              placeholder="今のメールアドレス"
+              value={nowEmail}
+              style={inputStyle}
+              onChange={(e) => setNowEmail(e.target.value)}
+            />
+          </div>
+
+          <div className={styles.inputContainer}>
+            <input
+              type="password"
+              className={styles.input}
+              placeholder="今のパスワード"
+              value={nowPassword}
+              onChange={(e) => setNowPassword(e.target.value)}
+            />
+            <p className={styles.note}>※半角英数字8~16文字</p>
+          </div>
+
+          <div className={styles.inputContainer}>
+            <input
+              type="email"
+              className={styles.input}
+              placeholder="新しいパスワード"
+              value={newPassword}
+              style={inputStyle}
+              onChange={(e) => setNewPassword(e.target.value)}
+            />
+
+            <p className={styles.note}>※半角英数字8~16文字</p>
+          </div>
+
+          <div className={styles.inputContainer}>
+            <input
+              type="password"
+              className={styles.input}
+              placeholder="新しいパスワード(再確認)"
+              value={newPasswordCon}
+              onChange={(e) => setNewPasswordCon(e.target.value)}
+            />
+          </div>
+
+          <button     //「OK」ボタン
+            className={styles.okbutton}
+            onClick={handleok}
             style={inputStyle}
-            onChange={(e) => setNewPassword(e.target.value)}
-          />
-
-          <p className={styles.note}>※半角英数字8~16文字</p>
+          >
+            OK
+          </button>
         </div>
 
-        <div className={styles.inputContainer}>
-          <input
-            type="password"
-            className={styles.input}
-            placeholder="新しいパスワード(再確認)"
-            value={newPasswordCon}
-            onChange={(e) => setNewPasswordCon(e.target.value)}
-          />
+        <div className={styles.right}>
+          <div className={styles.advertisement2}>広告</div>
         </div>
-
-        <button     //「OK」ボタン
-          className={styles.okbutton}
-          onClick={handleok}
-          style={inputStyle}
-        >
-          OK
-        </button>
       </div>
-
-      <div className={styles.right}>
-        <div className={styles.advertisement2}>広告</div>
-      </div>
-    </div>
     </div>
   );
 };

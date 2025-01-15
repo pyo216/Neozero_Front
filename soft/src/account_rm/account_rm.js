@@ -16,8 +16,13 @@ const RmAccount = () => {
   };
 
   const handleOkClick = () => {
-    if (!email || !password) {
-      setErrorMessage('※入力に不備があります。');
+    if (!email) {
+      setErrorMessage('※メールアドレスを入力してください。');
+      return;
+    }
+
+    if (!password) {
+      setErrorMessage('※パスワードを入力してください。');
       return;
     }
 
