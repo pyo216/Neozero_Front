@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'; // ページ遷移用
 import styles from './top.module.css'; // CSSモジュール
 import fontstyles from '../font/font.module.css';
 import pawloverslogoImg from './pawlovers.png'; // PawLoversロゴ画像
-import sampleImg from './sample.png'; // 広告サンプル画像
+import sampleImg from './sample.png'; // 広告サンプル画像(288:600)
 
 const TopPage = () => {
   const navigate = useNavigate(); // ページ遷移用
