@@ -47,6 +47,7 @@ const Login = () => {
       return;
     }
     //処理とおさない用
+    navigate('/top');
     
 
     // バックエンドへデータを送信
