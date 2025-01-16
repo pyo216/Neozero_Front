@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './pet_change.module.css';
 import fontstyles from '../font/font.module.css';
-import samplePet1Img from './samplePet1.png'; //259:550
-import samplePet2Img from './samplePet2.png'; //259:750
+import samplePet1Img from '../image/samplePet1.png'; //259:550
+import samplePet2Img from '../image/samplePet2.png'; //259:750
 
 const PetChange = () => {
   const navigate = useNavigate();

@@ -3,8 +3,8 @@ import React from 'react'; // React用
 import { useNavigate } from 'react-router-dom'; // ページ遷移用
 import styles from './nyakama.module.css'; // CSSモジュール(cssファイルかく)
 import fontstyles from '../font/font.module.css';
-import samplePet1Img from './samplePet1.png'; //259:550
-import samplePet2Img from './samplePet2.png'; //259:750
+import samplePet1Img from '../image/samplePet1.png'; //259:550
+import samplePet2Img from '../image/samplePet2.png'; //259:750
 
 const Nyakama = () => {
   const navigate = useNavigate(); // ページ遷移用

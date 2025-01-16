@@ -3,7 +3,7 @@ import React from 'react'; // React用
 import { useNavigate } from 'react-router-dom'; // ページ遷移用
 import styles from './mypage.module.css'; // CSSモジュール
 import fontstyles from '../font/font.module.css';
-import sampleMypageImg from './sampleMypage.png'; //(200:750) 横が入らん後で変更
+import sampleMypageImg from '../image/sampleMypage.png'; //(200:750) 横が入らん後で変更
 
 
 const MyPage = () => {
