@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './pet_change.module.css';
 import fontstyles from '../font/font.module.css';
+import samplePet1Img from './samplePet1.png'; //259:550
+import samplePet2Img from './samplePet2.png'; //259:750
 
 const PetChange = () => {
   const navigate = useNavigate();
@@ -41,7 +43,12 @@ const PetChange = () => {
         >
           トップページへ戻る
         </button>
-        <div className={styles.advertisement}>広告</div>
+        <div className={styles.advertisement}>
+          <img
+            src={samplePet1Img} // 広告サンプル
+            alt="samplePet1Img" // 代替テキスト
+          />  
+        </div>
       </div>
 
       <div className={styles.center}>
@@ -104,7 +111,12 @@ const PetChange = () => {
       </div>
 
       <div className={styles.right}>
-        <div className={styles.advertisement2}>広告</div>
+        <div className={styles.advertisement2}>
+          <img
+            src={samplePet2Img} // 広告サンプル
+            alt="samplePet2Img" // 代替テキスト
+          />  
+        </div>
       </div>
     </div>
     </div>
