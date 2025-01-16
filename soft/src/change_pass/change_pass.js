@@ -32,44 +32,44 @@ const ChangePass = () => {
   const handleok =async () => { // 「OK」ボタン押下
 
     if (!nowEmail) {
-      setErrorMessage('※現在のメールアドレスを入力してください。');
+      setErrorMessage('※現在のメールアドレスを入力してくださいワン。');
       return;
     }
 
     // 現在のパスワードのチェック
     if (!nowPassword) {
-      setErrorMessage('※現在のパスワードを入力してください。');
+      setErrorMessage('※現在のパスワードを入力してくださいニャン。');
       return;
     }
 
     // パスワードの形式チェック（現在のパスワード）
     if (!validatePassword(nowPassword)) {
-      setErrorMessage('※現在のパスワードは半角英数字8～16文字で入力してください。');
+      setErrorMessage('※現在のパスワードは半角英数字8～16文字で入力してくださいワン。');
       return;
     }
 
 
     // 新しいパスワードのチェック
     if (!newPassword) {
-      setErrorMessage('※新しいパスワードを入力してください。');
+      setErrorMessage('※新しいパスワードを入力してくださいニャン。');
       return;
     }
 
     // パスワードの形式チェック（新しいパスワード）
     if (!validatePassword(newPassword)) {
-      setErrorMessage('※新しいパスワードは半角英数字8～16文字で入力してください。');
+      setErrorMessage('※新しいパスワードは半角英数字8～16文字で入力してくださいワン。');
       return;
     }
 
     // パスワードの一致確認
     if (newPassword !== newPasswordCon) {
-      setErrorMessage('※パスワードが一致しません。');
+      setErrorMessage('※パスワードが一致しませんニャン。');
       return;
     }
 
     // 同一パスワードチェック
     if (newPassword === nowPassword) {
-      setErrorMessage('※新しいパスワードは現在のパスワードと異なるものを設定してください。');
+      setErrorMessage('※新しいパスワードは現在のパスワードと異なるものを設定してくださいワン。');
       return;
     }
 
@@ -91,13 +91,13 @@ const ChangePass = () => {
           setErrorMessage('');
           navigate('/change_info');
         } else {  // 認証失敗
-          setErrorMessage('入力情報が間違っています');
+          setErrorMessage('※入力情報が間違っていますニャン。');
         }
       } else {
-        setErrorMessage(data.error || 'ログインに失敗しました。');
+        setErrorMessage(data.error || '※ログインに失敗しましたワン。');
       }
     } catch (error) {
-      setErrorMessage('サーバーとの通信に失敗しました。');
+      setErrorMessage('※サーバーとの通信に失敗しましたニャン。');
     }
     //if (nowEmail === 'admin@example.com' && nowPassword === 'password123') {
     //navigate('/change_info');
