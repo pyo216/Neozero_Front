@@ -17,10 +17,12 @@
 }
 
 .context {
+    text-align: left; /* 左詰めにする */
     background: #99CCCC;
     padding: 20px;
     border-radius: 10px;
 }
+
 
 .button {
     height: 50px;
