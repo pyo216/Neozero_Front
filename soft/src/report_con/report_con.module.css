@@ -177,6 +177,18 @@
     border: 1px solid;
 }
 
+.advertisement img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.advertisement2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .okButton {
     font-size: large;
     border: none;
