@@ -19,17 +19,17 @@ const RmAccount = () => {
 
   const handleOkClick = () => {
     if (!email) {
-      setErrorMessage('※メールアドレスを入力してください。');
+      setErrorMessage('※メールアドレスを入力してくださいワン。');
       return;
     }
 
     if (!password) {
-      setErrorMessage('※パスワードを入力してください。');
+      setErrorMessage('※パスワードを入力してくださいニャン。');
       return;
     }
 
     if (!validatePassword(password)) {
-      setErrorMessage('※パスワードは半角英数字8～16文字で入力してください。');
+      setErrorMessage('※パスワードは半角英数字8～16文字で入力してくださいワン。');
       return;
     }
 
