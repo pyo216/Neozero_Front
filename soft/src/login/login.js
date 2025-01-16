@@ -33,24 +33,42 @@ const Login = () => {
     return passwordRegex.test(password);
   };
 
-  const handleLogin = () => {
-    if (!email) {
+  const handleLogin = async () => {
+    if (!email) { // メールアドレスが未入力のとき
       setErrorMessage('※メールアドレスを入力してください。');
       return;
-    }
-
-    if (!password) {
+    } else if (!password) { // パスワードが未入力のとき
       setErrorMessage('※パスワードを入力してください。');
       return;
     }
+    //処理とおさない用
+    //navigate('/top');
 
-    if (!validatePassword(password)) {
-      setErrorMessage('※パスワードは半角英数字8～16文字で入力してください。');
-      return;
+    // バックエンドへデータを送信
+    try {
+      const response = await fetch('http://localhost:8000/login/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        if (data.result === 0) {  // 認証成功
+          setErrorMessage('');
+          navigate('/top');
+        } else {  // 認証失敗
+          setErrorMessage('入力情報が間違っています');
+        }
+      } else {
+        setErrorMessage(data.error || 'ログインに失敗しました。');
+      }
+    } catch (error) {
+      setErrorMessage('サーバーとの通信に失敗しました。');
     }
-
-    setErrorMessage('');
-    navigate('/top');
   };
 
   const handleRegister = () => {

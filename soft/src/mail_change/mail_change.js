@@ -25,7 +25,7 @@ const MailChange = () => {
     navigate('/top');
   };
 
-  const handleOk = () => {
+  const handleOk =  async() => {
     const { currentEmail, newEmail, currentPassword } = formData;
 
     if (!currentEmail) {
@@ -48,7 +48,31 @@ const MailChange = () => {
       return;
     }
 
-    navigate('/change_info');
+    //入力されてたら
+    try {
+      const response = await fetch('http://localhost:8000/mail_change/mail_change', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ currentEmail, newEmail, currentPassword }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        if (data.result === 0) {  // 認証成功
+          setErrorMessage('');
+          navigate('/change_info');
+        } else {  // 認証失敗
+          setErrorMessage('入力情報が間違っています');
+        }
+      } else {
+        setErrorMessage(data.error || 'メール変更に失敗しました。');
+      }
+    } catch (error) {
+      setErrorMessage('サーバーとの通信に失敗しました。');
+    };
   };
 
   const handleInputChange = (e) => {

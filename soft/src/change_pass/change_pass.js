@@ -29,7 +29,7 @@ const ChangePass = () => {
     navigate('/top'); // トップページに移動
   };
 
-  const handleok = () => { // 「OK」ボタン押下
+  const handleok =async () => { // 「OK」ボタン押下
 
     if (!nowEmail) {
       setErrorMessage('※現在のメールアドレスを入力してください。');
@@ -74,8 +74,33 @@ const ChangePass = () => {
     }
 
     // 認証確認
+    try {
+      const response = await fetch('http://localhost:8000/pass_change/pass_change', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        //送信情報
+        body: JSON.stringify({ nowEmail, nowPassword,newPassword }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        if (data.result === 0) {  // 認証成功
+          setErrorMessage('');
+          navigate('/change_info');
+        } else {  // 認証失敗
+          setErrorMessage('入力情報が間違っています');
+        }
+      } else {
+        setErrorMessage(data.error || 'ログインに失敗しました。');
+      }
+    } catch (error) {
+      setErrorMessage('サーバーとの通信に失敗しました。');
+    }
     //if (nowEmail === 'admin@example.com' && nowPassword === 'password123') {
-    navigate('/change_info');
+    //navigate('/change_info');
     //} else {
     //setErrorMessage('※間違っています。もう一度入力してください。');
     //}
