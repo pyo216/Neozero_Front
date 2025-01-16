@@ -35,15 +35,15 @@ const Login = () => {
 
   const handleLogin = async () => {
     if (!email) { // メールアドレスが未入力のとき
-      setErrorMessage('※メールアドレスを入力してください。');
+      setErrorMessage('メールアドレスを入力してくださいニャン');
       return;
     } else if (!password) { // パスワードが未入力のとき
-      setErrorMessage('※パスワードを入力してください。');
+      setErrorMessage('パスワードを入力してくださいワン');
       return;
     }
 
     if (!validatePassword(password)) {
-      setErrorMessage('※パスワードは半角英数字8～16文字で入力してください。');
+      setErrorMessage('パスワードは半角英数字8～16文字で入力してくださいニャン');
       return;
     }
     //処理とおさない用
@@ -67,13 +67,13 @@ const Login = () => {
           setErrorMessage('');
           navigate('/top');
         } else {  // 認証失敗
-          setErrorMessage('入力情報が間違っています');
+          setErrorMessage('入力情報が間違っていますワン');
         }
       } else {
-        setErrorMessage(data.error || 'ログインに失敗しました。');
+        setErrorMessage(data.error || 'ログインに失敗しましたニャン');
       }
     } catch (error) {
-      setErrorMessage('サーバーとの通信に失敗しました。');
+      setErrorMessage('サーバーとの通信に失敗しましたワン');
     }
   };
 
