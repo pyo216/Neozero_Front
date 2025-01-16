@@ -166,6 +166,12 @@
 .advertisement {
     height: 750px;
     width: 90%;   
-    border: 1px solid #000; /* 枠線 */ 
+    /* border: 1px solid #000; /* 枠線 */ 
     margin-top: 20px; /* 上の余白(外側) */       
+}
+
+.advertisement img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
