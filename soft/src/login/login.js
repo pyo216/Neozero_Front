@@ -41,8 +41,13 @@ const Login = () => {
       setErrorMessage('※パスワードを入力してください。');
       return;
     }
+
+    if (!validatePassword(password)) {
+      setErrorMessage('※パスワードは半角英数字8～16文字で入力してください。');
+      return;
+    }
     //処理とおさない用
-    //navigate('/top');
+    
 
     // バックエンドへデータを送信
     try {
