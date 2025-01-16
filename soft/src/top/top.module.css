@@ -47,9 +47,17 @@
 .advertisement{
     height:600px;
     width: 20%; 
-    border: 1px solid #000; /* 枠線 */    
+    /* border: 1px solid #000; /* 枠線 */    
     margin: 10px 30px; /* 上下左右の余白(外側) */                                
 }
+
+.advertisement img {
+    width: 100%; /* 親要素に合わせる */
+    height: 100%; /* 親要素に合わせる */
+    object-fit: cover; /* トリミングを適用 */
+}
+
+
 
 .media{
     min-height: 600px; /* 最大高さを設定 */
