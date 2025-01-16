@@ -3,6 +3,8 @@ import React from 'react'; // React用
 import { useNavigate } from 'react-router-dom'; // ページ遷移用
 import styles from './logout.module.css'; // CSSモジュール(cssファイルかく)
 import fontstyles from '../font/font.module.css';
+import samplePet1Img from '../image/samplePet1.png'; //259:550
+import samplePet2Img from '../image/samplePet2.png'; //259:750
 
 const Logout = () => {
   const navigate = useNavigate(); // ページ遷移用
@@ -29,7 +31,12 @@ const Logout = () => {
       <div className={styles.body}>
         <div className={styles.left}>
           <button className={styles.topButton} onClick={handleTop} style={inputStyle}>トップページへ戻る</button>
-          <div className={styles.advertisement}>広告</div>
+          <div className={styles.advertisement}>
+            <img
+              src={samplePet1Img} // 広告サンプル
+              alt="samplePet1Img" // 代替テキスト
+            />
+          </div>
         </div>
 
         <div className={styles.center}>
@@ -42,7 +49,12 @@ const Logout = () => {
         </div>
 
         <div className={styles.right}>
-          <div className={styles.advertisement2}>広告</div>
+          <div className={styles.advertisement2}>
+            <img
+              src={samplePet2Img} // 広告サンプル
+              alt="samplePet2Img" // 代替テキスト
+            />
+          </div>
         </div>
       </div>
       </div>
