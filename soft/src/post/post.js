@@ -142,7 +142,7 @@ const Post = () => {
             className={`${styles.button} ${styles.register}`}
             
           >
-            登録
+            投稿
           </button>
         </div>
       </div>
