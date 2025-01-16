@@ -29,22 +29,22 @@ const MailChange = () => {
     const { currentEmail, newEmail, currentPassword } = formData;
 
     if (!currentEmail) {
-      setErrorMessage('※現在のメールアドレスを入力してください。');
+      setErrorMessage('※現在のメールアドレスを入力してくださいニャン。');
       return;
     }
 
     if (!newEmail) {
-      setErrorMessage('※新しいメールアドレスを入力してください。');
+      setErrorMessage('※新しいメールアドレスを入力してくださいワン。');
       return;
     }
 
     if (!currentPassword) {
-      setErrorMessage('※パスワードを入力してください。');
+      setErrorMessage('※パスワードを入力してくださいニャン。');
       return;
     }
 
     if (!validatePassword(currentPassword)) {
-      setErrorMessage('※パスワードは半角英数字8～16文字で入力してください。');
+      setErrorMessage('※パスワードは半角英数字8～16文字で入力してくださいワン。');
       return;
     }
 
@@ -65,13 +65,13 @@ const MailChange = () => {
           setErrorMessage('');
           navigate('/change_info');
         } else {  // 認証失敗
-          setErrorMessage('入力情報が間違っています');
+          setErrorMessage('※入力情報が間違っていますニャン。');
         }
       } else {
-        setErrorMessage(data.error || 'メール変更に失敗しました。');
+        setErrorMessage(data.error || '※メール変更に失敗しましたワン。');
       }
     } catch (error) {
-      setErrorMessage('サーバーとの通信に失敗しました。');
+      setErrorMessage('※サーバーとの通信に失敗しましたニャン。');
     };
   };
 
