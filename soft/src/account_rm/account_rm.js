@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './account_rm.module.css';
 import fontstyles from '../font/font.module.css';
-import samplePet1Img from '../image/samplePet1.png'; //259:550
-import samplePet2Img from '../image/samplePet2.png'; //259:750
+import Left2Img from '../image/Left2.png'; //259:550
+import Right2Img from '../image/Right2.png'; //259:750
 
 const RmAccount = () => {
   const navigate = useNavigate();
@@ -63,8 +63,8 @@ const RmAccount = () => {
           </button>
           <div className={styles.advertisement}>
             <img
-              src={samplePet1Img} // 広告サンプル
-              alt="samplePet1Img" // 代替テキスト
+              src={Left2Img} // 広告サンプル
+              alt="Left2Img" // 代替テキスト
             />
             </div>
         </div>
@@ -104,8 +104,8 @@ const RmAccount = () => {
         <div className={styles.right}>
           <div className={styles.advertisement2}>
             <img
-              src={samplePet2Img} // 広告サンプル
-              alt="samplePet2Img" // 代替テキスト
+              src={Right2Img} // 広告サンプル
+              alt="Right2Img" // 代替テキスト
             />
           </div>
         </div>

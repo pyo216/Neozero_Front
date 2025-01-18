@@ -4,7 +4,8 @@ import { useNavigate } from 'react-router-dom'; // ページ遷移用
 import styles from './top.module.css'; // CSSモジュール
 import fontstyles from '../font/font.module.css';
 import pawloverslogoImg from './pawlovers.png'; // PawLoversロゴ画像
-import sampleTopImg from '../image/sampleTop.png'; // 広告サンプル画像(288:600)
+import TopleftImg from '../image/Topleft.png'; // 広告サンプル画像(288:600)
+import ToprightImg from '../image/Topright.png'; // 広告サンプル画像(288:600)
 
 const TopPage = () => {
   const navigate = useNavigate(); // ページ遷移用
@@ -61,8 +62,8 @@ return (
       <div className={styles.bottom}>
         <div className={styles.advertisement}>
           <img
-            src={sampleTopImg} // 広告サンプル
-            alt="sampleTopImg" // 代替テキスト
+            src={TopleftImg} // 広告サンプル
+            alt="TopleftImg" // 代替テキスト
           />
         </div>
 
@@ -99,8 +100,8 @@ return (
 
         <div className={styles.advertisement}>
           <img
-            src={sampleTopImg} // 広告サンプル
-            alt="sampleTopImg" // 代替テキスト
+            src={ToprightImg} // 広告サンプル
+            alt="ToprightImg" // 代替テキスト
           />
         </div>
       </div>

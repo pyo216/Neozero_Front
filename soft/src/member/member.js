@@ -3,8 +3,8 @@ import React from 'react'; // React用
 import { useNavigate } from 'react-router-dom'; // ページ遷移用
 import styles from './member.module.css'; // CSSモジュール
 import fontstyles from '../font/font.module.css';
-import samplePet1Img from '../image/samplePet1.png'; //259:550
-import samplePet2Img from '../image/samplePet2.png'; //259:750
+import Left1Img from '../image/Left1.png'; //259:550
+import Right1Img from '../image/Right1.png'; //259:750
 
 const Member = () => {
   const navigate = useNavigate(); // ページ遷移用
@@ -45,8 +45,8 @@ const Member = () => {
 
         <div className={styles.advertisement}>
           <img
-            src={samplePet1Img} // 広告サンプル
-            alt="samplePet1Img" // 代替テキスト
+            src={Left1Img} // 広告サンプル
+            alt="Left1Img" // 代替テキスト
           />  
         </div>
 
@@ -85,8 +85,8 @@ const Member = () => {
       <div className={styles.right}>
         <div className={styles.advertisement2}>
           <img
-            src={samplePet2Img} // 広告サンプル
-            alt="samplePet2Img" // 代替テキスト
+            src={Right1Img} // 広告サンプル
+            alt="Right1Img" // 代替テキスト
           />  
         </div>
       </div>
