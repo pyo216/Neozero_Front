@@ -1,8 +1,11 @@
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from route_login import router as login_router
 from route_mailchange import router as mailchange_router
 from route_passchange import router as passchange_router
+from route_top import router as top_router
+from route_good import router as good_router
 
 app = FastAPI()
 
@@ -26,6 +29,12 @@ app.add_middleware(
 app.include_router(login_router, prefix="/login", tags=["authentication"])
 app.include_router(mailchange_router, prefix="/mail_change", tags=["authentication"])
 app.include_router(passchange_router, prefix="/pass_change", tags=["authentication"])
+app.include_router(top_router, prefix="/top", tags=["authentication"])
+app.include_router(good_router, prefix="/good", tags=["authentication"])
+
+# 静的ファイルのマウント
+app.mount("/photo", StaticFiles(directory="photo"), name="photo")
+
 
 # アプリケーションの起動設定
 if __name__ == "__main__":

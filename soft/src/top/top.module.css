@@ -99,6 +99,12 @@
     margin: 10px ; /* 上下左右の余白(外側) */
 }
 
+.picture img {
+    width: 100%; /* 画像が横幅100%で拡大縮小される */
+    height: 100%; /* 高さ100%で拡大縮小される */
+    object-fit: cover; /* 枠いっぱいに画像がフィット */
+  }
+  
 .info {
     flex: 2;
     height: 340px; 
@@ -120,10 +126,27 @@
     margin-top: 5px; /* 上下左右の余白(外側) */
     cursor: pointer; /* カーソル変更 */
 }
-
 .followButton:hover {
     background: #9a88c7; /* 背景色 */
 }
+
+/*いいねボタン*/
+.good{
+    height: 50px;
+    width: 50%; 
+    font-size: large; /* 文字の大きさ */ 
+    border: none; /* 枠線 */
+    border-radius: 30px; /* 丸み */
+    background: #b09bd1; /* 背景色 */
+    padding: 10px; 
+    margin-top: 5px; /* 上下左右の余白(外側) */
+    cursor: pointer; /* カーソル変更 */
+}
+.good:hover {
+    background: #9a88c7; /* 背景色 */
+}
+
+
 
 .push{
     width: 100%; 
@@ -132,12 +155,6 @@
     justify-content: center; /* 左右中央寄せ */
 }
 
-.good{
-    height: 70px;
-    width: 100%; 
-    border: 1px solid #000; /* 枠線 */ 
-    margin: 10px; /* 上下左右の余白(外側) */
-}
 
 .money{
     height: 70px;
