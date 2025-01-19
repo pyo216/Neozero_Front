@@ -141,3 +141,9 @@ input::placeholder {
     font-size: 16px;
     color: #666;
 }
+
+.errorMessage {
+    color: #ff0000;
+    font-size: 0.8rem;
+    margin-top: 4px;
+  }
