@@ -176,6 +176,28 @@
     object-fit: cover;
 }
 
+.formGroup {
+    width: 70%;
+    margin-bottom: 20px;
+    /* 下の余白(外側) */
+    display: flex;
+    flex-flow: column;
+    /* 縦並び */
+    align-items: center;
+    /* 上下中央寄せ */
+    justify-content: center;
+    /* 左右中央寄せ */
+}
+
+.formGroup label {
+    color: #000;
+    /* 文字の色 */
+    margin-top: 10px;
+    /* 上の余白(外側) */
+    margin-right: auto;
+    /* 右の余白(外側) */
+}
+
 ::placeholder {
     text-align: center;
 }

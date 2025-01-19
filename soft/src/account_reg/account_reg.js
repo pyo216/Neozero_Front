@@ -18,28 +18,34 @@ const AccountReg = () => {
     const passwordRegex = /^[a-zA-Z0-9]{8,16}$/; // パスワードの形式チェック
 
     if (!email || !name || !password || !passwordConfirm) {
-      setErrorMessage("※必須項目が入力されていません。");
+      setErrorMessage("※必須項目が入力されていませんワン。");
+      return;
+    }
+
+    if (name.length > 8) {
+      setErrorMessage("※ニックネームは8文字以内で入力してくださいニャン。");
       return;
     }
 
     if (!passwordRegex.test(password)) {
-      setErrorMessage("※パスワードは半角英数字8~16文字で入力してください。");
+      setErrorMessage("※パスワードは半角英数字8~16文字で入力してくださいワン。");
       return;
     }
 
     if (password !== passwordConfirm) {
-      setErrorMessage("※パスワードが一致しません。");
+      setErrorMessage("※パスワードが一致しませんニャン。");
       return;
     }
 
     if (comment.length > 100) {
-      setErrorMessage("※フリーコメントは100文字以内で入力してください。");
+      setErrorMessage("※フリーコメントは100文字以内で入力してくださいワン。");
       return;
     }
 
     setErrorMessage("");
     navigate('/'); // ログインページに移動
   };
+
   const inputStyle = {
     fontFamily: 'CraftMincho, serif'
   };
@@ -79,8 +85,10 @@ const AccountReg = () => {
               onChange={(e) => setName(e.target.value)}
               required
               style={inputStyle}
+              //placeholder="8文字以内"
             />
           </div>
+          <p className={styles.note}>※8文字以内</p>
 
           {/* パスワード */}
           <div className={styles.item}>
