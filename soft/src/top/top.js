@@ -74,7 +74,10 @@ const handleGood = async (postId) => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(postId),
+        //ユーザidと投稿した人のユーザidを送る
+        body: JSON.stringify(
+        postuserid,
+        userid),
       });
   
       // レスポンスの処理
