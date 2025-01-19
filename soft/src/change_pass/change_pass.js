@@ -1,96 +1,79 @@
-// パスワード変更画面
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // ページ遷移用
-import styles from './change_pass.module.css'; // CSSモジュール(cssファイルかく)
+import { useNavigate } from 'react-router-dom';
+import styles from './change_pass.module.css';
 import fontstyles from '../font/font.module.css';
-import Left1Img from '../image/Left1.png'; //259:550
-import Right1Img from '../image/Right1.png'; //259:750
-
+import Left1Img from '../image/Left1.png';
+import Right1Img from '../image/Right1.png';
 
 const ChangePass = () => {
-  //ここから下変える
-  const navigate = useNavigate(); // ページ遷移用
-
-  // useState フックを使用して状態を管理
+  const navigate = useNavigate();
   const [nowEmail, setNowEmail] = useState('');
   const [nowPassword, setNowPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [newPasswordCon, setNewPasswordCon] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
-  // パスワードバリデーション用の関数
   const validatePassword = (password) => {
-    // 半角英数字のみを許可する正規表現
     const passwordRegex = /^[a-zA-Z0-9]{8,16}$/;
     return passwordRegex.test(password);
   };
 
-  const handleTop = () => { // 「トップページへ戻る」ボタン押下
-    navigate('/top'); // トップページに移動
+  const handleTop = () => {
+    navigate('/top');
   };
 
-  const handleok =async () => { // 「OK」ボタン押下
-
+  const handleok = async () => {
     if (!nowEmail) {
       setErrorMessage('※現在のメールアドレスを入力してくださいワン。');
       return;
     }
 
-    // 現在のパスワードのチェック
     if (!nowPassword) {
       setErrorMessage('※現在のパスワードを入力してくださいニャン。');
       return;
     }
 
-    // パスワードの形式チェック（現在のパスワード）
     if (!validatePassword(nowPassword)) {
       setErrorMessage('※現在のパスワードは半角英数字8～16文字で入力してくださいワン。');
       return;
     }
 
-
-    // 新しいパスワードのチェック
     if (!newPassword) {
       setErrorMessage('※新しいパスワードを入力してくださいニャン。');
       return;
     }
 
-    // パスワードの形式チェック（新しいパスワード）
     if (!validatePassword(newPassword)) {
       setErrorMessage('※新しいパスワードは半角英数字8～16文字で入力してくださいワン。');
       return;
     }
 
-    // パスワードの一致確認
     if (newPassword !== newPasswordCon) {
       setErrorMessage('※パスワードが一致しませんニャン。');
       return;
     }
 
-    // 同一パスワードチェック
     if (newPassword === nowPassword) {
       setErrorMessage('※新しいパスワードは現在のパスワードと異なるものを設定してくださいワン。');
       return;
     }
 
-    // 認証確認
     try {
       const response = await fetch('http://localhost:8000/pass_change/pass_change', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        //送信情報
-        body: JSON.stringify({ nowEmail, nowPassword,newPassword }),
+        body: JSON.stringify({ nowEmail, nowPassword, newPassword }),
       });
 
       const data = await response.json();
 
       if (response.ok) {
-        if (data.result === 0) {  // 認証成功
+        if (data.result === 0) {
           setErrorMessage('');
           navigate('/change_info');
-        } else {  // 認証失敗
+        } else {
           setErrorMessage('※入力情報が間違っていますニャン。');
         }
       } else {
@@ -99,12 +82,8 @@ const ChangePass = () => {
     } catch (error) {
       setErrorMessage('※サーバーとの通信に失敗しましたニャン。');
     }
-    //if (nowEmail === 'admin@example.com' && nowPassword === 'password123') {
-    //navigate('/change_info');
-    //} else {
-    //setErrorMessage('※間違っています。もう一度入力してください。');
-    //}
   };
+
   const inputStyle = {
     fontFamily: 'CraftMincho, serif'
   };
@@ -113,8 +92,7 @@ const ChangePass = () => {
     <div className={fontstyles.fontFamily}>
       <div className={styles.body}>
         <div className={styles.left}>
-
-          <button   //トップページへ戻るボタン
+          <button
             className={styles.topbutton}
             onClick={handleTop}
             style={inputStyle}
@@ -124,8 +102,8 @@ const ChangePass = () => {
 
           <div className={styles.advertisement}>
             <img
-              src={Left1Img} // 広告サンプル
-              alt="Left1Img" // 代替テキスト
+              src={Left1Img}
+              alt="Left1Img"
             />
           </div>
         </div>
@@ -133,57 +111,55 @@ const ChangePass = () => {
         <div className={styles.center}>
           <div className={styles.password}>パスワード変更</div>
 
-          {/* エラーメッセージ表示 */}
           {errorMessage && (
             <p className={styles.errorMessage}>{errorMessage}</p>
           )}
 
-          <div className={styles.inputContainer}>
+            <label htmlFor="nowEmail">現在のメールアドレス</label>
             <input
               type="email"
+              id="nowEmail"
               className={styles.input}
-              placeholder="今のメールアドレス"
+              placeholder="現在のメールアドレスを入力してください"
               value={nowEmail}
               style={inputStyle}
               onChange={(e) => setNowEmail(e.target.value)}
             />
-          </div>
 
-          <div className={styles.inputContainer}>
+            <label htmlFor="nowPassword">現在のパスワード</label>
             <input
               type="password"
+              id="nowPassword"
               className={styles.input}
-              placeholder="今のパスワード"
+              placeholder="現在のパスワードを入力してください"
               value={nowPassword}
               onChange={(e) => setNowPassword(e.target.value)}
             />
-            <p className={styles.note}>※半角英数字8~16文字</p>
-          </div>
+            <span className={styles.note}>※半角英数字8～16文字</span>
 
-          <div className={styles.inputContainer}>
+            <label htmlFor="newPassword">新しいパスワード</label>
             <input
-              type="email"
+              type="password"
+              id="newPassword"
               className={styles.input}
-              placeholder="新しいパスワード"
+              placeholder="新しいパスワードを入力してください"
               value={newPassword}
               style={inputStyle}
               onChange={(e) => setNewPassword(e.target.value)}
             />
+            <span className={styles.note}>※半角英数字8～16文字</span>
 
-            <p className={styles.note}>※半角英数字8~16文字</p>
-          </div>
-
-          <div className={styles.inputContainer}>
+            <label htmlFor="newPasswordCon">新しいパスワード（確認用）</label>
             <input
               type="password"
+              id="newPasswordCon"
               className={styles.input}
-              placeholder="新しいパスワード(再確認)"
+              placeholder="新しいパスワード（確認用）を入力してください"
               value={newPasswordCon}
               onChange={(e) => setNewPasswordCon(e.target.value)}
             />
-          </div>
 
-          <button     //「OK」ボタン
+          <button
             className={styles.okbutton}
             onClick={handleok}
             style={inputStyle}
@@ -195,8 +171,8 @@ const ChangePass = () => {
         <div className={styles.right}>
           <div className={styles.advertisement2}>
             <img
-              src={Right1Img} // 広告サンプル
-              alt="Right1Img" // 代替テキスト
+              src={Right1Img}
+              alt="Right1Img"
             />
           </div>
         </div>
