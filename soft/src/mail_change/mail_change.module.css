@@ -121,3 +121,7 @@
 input::placeholder {
     text-align: center;
 }
+
+.form-group {
+    gap: 0px;
+}

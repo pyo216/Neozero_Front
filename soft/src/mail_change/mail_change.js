@@ -1,11 +1,9 @@
-//メールアドレス変更
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './mail_change.module.css';
 import fontstyles from '../font/font.module.css';
-import Left1Img from '../image/Left1.png'; //259:550
-import Right1Img from '../image/Right1.png'; //259:750
-
+import Left1Img from '../image/Left1.png';
+import Right1Img from '../image/Right1.png';
 
 const MailChange = () => {
   const navigate = useNavigate();
@@ -25,7 +23,7 @@ const MailChange = () => {
     navigate('/top');
   };
 
-  const handleOk =  async() => {
+  const handleOk = async() => {
     const { currentEmail, newEmail, currentPassword } = formData;
 
     if (!currentEmail) {
@@ -48,7 +46,6 @@ const MailChange = () => {
       return;
     }
 
-    //入力されてたら
     try {
       const response = await fetch('http://localhost:8000/mail_change/mail_change', {
         method: 'POST',
@@ -61,10 +58,10 @@ const MailChange = () => {
       const data = await response.json();
 
       if (response.ok) {
-        if (data.result === 0) {  // 認証成功
+        if (data.result === 0) {
           setErrorMessage('');
           navigate('/change_info');
-        } else {  // 認証失敗
+        } else {
           setErrorMessage('※入力情報が間違っていますニャン。');
         }
       } else {
@@ -89,70 +86,86 @@ const MailChange = () => {
 
   return (
     <div className={fontstyles.fontFamily}>
-    <div className={styles.body}>
-      <div className={styles.left}>
-        <button
-          className={styles['main-button']}
-          style={inputStyle}
-          onClick={handleTop}
-        >
-          トップページへ戻る
-        </button>
-        <div className={styles.advertisement}>
-          <img
-            src={Left1Img} // 広告サンプル
-            alt="Left1Img" // 代替テキスト
-          />
+      <div className={styles.body}>
+        <div className={styles.left}>
+          <button
+            className={styles['main-button']}
+            style={inputStyle}
+            onClick={handleTop}
+          >
+            トップページへ戻る
+          </button>
+          <div className={styles.advertisement}>
+            <img
+              src={Left1Img}
+              alt="Left1Img"
+            />
+          </div>
         </div>
-      </div>
 
-      <div className={styles.center}>
-        <div className={styles.mail}>メールアドレス変更</div>
-        <p className={styles.p}>{errorMessage}</p>
-        <input
-          type="email"
-          name="currentEmail"
-          className={styles.input}
-          placeholder="今のメールアドレス"
-          value={formData.currentEmail}
-          onChange={handleInputChange}
-          style={inputStyle}
-        />
-        <input
-          type="email"
-          name="newEmail"
-          className={styles.input}
-          placeholder="新しいメールアドレス"
-          value={formData.newEmail}
-          style={inputStyle}
-          onChange={handleInputChange}
-        />
-        <input
-          type="password"
-          name="currentPassword"
-          className={styles.input}
-          placeholder="今のパスワード"
-          value={formData.currentPassword}
-          onChange={handleInputChange}
-        />
-         <span className={styles.passwordHint}>※半角英数字8～16文字</span>
-        <button
-          className={styles.ok}
-          onClick={handleOk}
-          style={inputStyle}
-        >
-          OK
-        </button>
-      </div>
+        <div className={styles.center}>
+          <div className={styles.mail}>メールアドレス変更</div>
+          <p className={styles.p}>{errorMessage}</p>
+          
+          <div className={styles['form-group']}>
+            <label htmlFor="currentEmail">現在のメールアドレス</label>
+            <input
+              type="email"
+              id="currentEmail"
+              name="currentEmail"
+              className={styles.input}
+              placeholder="現在のメールアドレスを入力してください"
+              value={formData.currentEmail}
+              onChange={handleInputChange}
+              style={inputStyle}
+            />
+          </div>
 
-      <div className={styles.right}>
-        <div className={styles.advertisement2}>
-          <img
-            src={Right1Img} // 広告サンプル
-            alt="Right1Img" // 代替テキスト
+          <div className={styles['form-group']}>
+            <label htmlFor="newEmail">新しいメールアドレス</label>
+            <input
+              type="email"
+              id="newEmail"
+              name="newEmail"
+              className={styles.input}
+              placeholder="新しいメールアドレスを入力してください"
+              value={formData.newEmail}
+              style={inputStyle}
+              onChange={handleInputChange}
+            />
+          </div>
+
+          <div className={styles['form-group']}>
+          <label htmlFor="currentPassword">現在のパスワード</label>
+          <input
+            type="password"
+            name="currentPassword"
+            className={styles.input}
+            placeholder="現在のパスワードを入力してください"
+            value={formData.currentPassword}
+            onChange={handleInputChange}
+            style={inputStyle}
           />
+          </div>
+          <span className={styles.passwordHint}>※半角英数字8～16文字</span>
+
+          <button
+            className={styles.ok}
+            onClick={handleOk}
+            style={inputStyle}
+          >
+            OK
+          </button>
         </div>
-      </div>
+
+        <div className={styles.right}>
+          <div className={styles.advertisement2}>
+            <img
+              src={Right1Img}
+              alt="Right1Img"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
