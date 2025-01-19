@@ -64,8 +64,34 @@ const handleGood = async (postId) => {
     navigate('/mypage');
   };
 
-  const handleFollow = () => {
+  const handleFollow = async (postuserid) => {
     // フォロー機能用の空関数を維持
+   /* try {
+
+      // POSTリクエストを送信
+      const response = await fetch('http://localhost:8000/good/good', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(postId),
+      });
+  
+      // レスポンスの処理
+      const data = await response.json();
+      if (response==1) {
+        // 成功した場合、ボタンを無効にする
+        setIsLiked(true);
+        console.log('送信成功:', data);
+        // 追加の処理があれば書く
+      } else {
+        // エラーハンドリング
+        console.error('エラー:', data);
+      }
+    } catch (error) {
+      // 通信エラーなどのエラーハンドリング
+      console.error('通信エラー:', error);
+    } */
   };
 
   const handleReport = () => {
@@ -160,7 +186,10 @@ const handleGood = async (postId) => {
                     <button
                       className={styles.followButton}
                       onClick={handleFollow}
+                      //onClick={() => handleGood(post.postuserid)
+                      //disabled={post.postuserid !== 0} // 0以外の場合にボタンが無効になる
                       style={inputStyle}
+                      //{post.postuserid === 0 ? "フォロー" : "フォロー済み"} 
                     >
                       フォロー
                     </button>
@@ -168,7 +197,7 @@ const handleGood = async (postId) => {
                     <div className={styles.push}>
                       <button
                         className={styles.good}
-                        onClick={() => handleGood(post.id)} 
+                        onClick={() => handleGood(post.id)} //post.idを取得
                         style={inputStyle}
                         disabled={post.good !== 0} // 0以外の場合にボタンが無効になる
                       >
