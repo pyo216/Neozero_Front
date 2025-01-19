@@ -99,12 +99,13 @@
     margin: 10px ; /* 上下左右の余白(外側) */
 }
 
+/*画像トリミング用css*/
 .picture img {
     width: 100%; /* 画像が横幅100%で拡大縮小される */
     height: 100%; /* 高さ100%で拡大縮小される */
     object-fit: cover; /* 枠いっぱいに画像がフィット */
   }
-  
+
 .info {
     flex: 2;
     height: 340px; 

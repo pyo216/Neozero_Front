@@ -98,6 +98,11 @@ const handleGood = async (postId) => {
     navigate('/report_con');
   };
 
+  const handlesuperchat = () => {
+    //外部サイトへ飛ぶ(新しいタブで)
+    window.open('https://www.kochi-tech.ac.jp/', '_blank', 'noopener noreferrer')
+  };
+
   const inputStyle = {
     fontFamily: 'CraftMincho, serif',
   };
@@ -203,7 +208,15 @@ const handleGood = async (postId) => {
                       >
                     {post.good === 0 ? "いいね" : "いいね済み"} 
                       </button>
-                      <div className={styles.money}>スパチャ</div>
+
+                      <button
+                      className={styles.good}
+                      onClick={handlesuperchat}
+                      style={inputStyle}
+                    >
+                      スパチャ
+                    </button>
+                
                     </div>
 
                     <div className={styles.comment}>{post.comment}</div>
