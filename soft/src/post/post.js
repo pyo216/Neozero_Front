@@ -72,19 +72,19 @@ const Post = () => {
 
     // 画像のバリデーション
     if (!formData.file) {
-      newErrors.file = '※画像をアップロードしてください';
+      newErrors.file = '※画像をアップロードしてほしいニャン';
       isValid = false;
     }
 
     // タイトルのバリデーション
     if (formData.title.length > 11) {
-      newErrors.title = '※タイトルは11字以内で入力してください';
+      newErrors.title = '※タイトルは11字以内で入力してほしいワン';
       isValid = false;
     }
 
     // キャプションのバリデーション
     if (formData.caption.length > 50) {
-      newErrors.caption = '※キャプションは50字以内で入力してください';
+      newErrors.caption = '※キャプションは50字以内で入力してほしいニャン';
       isValid = false;
     }
 

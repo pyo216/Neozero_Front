@@ -20,17 +20,17 @@ const PetChange = () => {
   const handlepetcon = () => {
     // バリデーションチェック
     if (!imagePreview) {
-      setErrorMessage('※画像は必須項目ですニャン。');
+      setErrorMessage('※画像は必須項目ニャン。');
       return;
     }
 
     if (name.length > 8) {
-      setErrorMessage('※名前は8文字以内で入力してくださいワン。');
+      setErrorMessage('※名前は8文字以内で入力してほしいワン。');
       return;
     }
 
     if (comment && comment.length > 100) {
-      setErrorMessage('※フリーコメントは100字以内で入力してくださいニャン。');
+      setErrorMessage('※フリーコメントは100字以内で入力してほしいニャン。');
       return;
     }
 

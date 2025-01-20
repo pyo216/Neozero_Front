@@ -18,27 +18,27 @@ const AccountReg = () => {
     const passwordRegex = /^[a-zA-Z0-9]{8,16}$/; // パスワードの形式チェック
 
     if (!email || !name || !password || !passwordConfirm) {
-      setErrorMessage("※必須項目が入力されていませんワン。");
+      setErrorMessage("※必須項目が入力されていないワン。");
       return;
     }
 
     if (name.length > 8) {
-      setErrorMessage("※ニックネームは8文字以内で入力してくださいニャン。");
+      setErrorMessage("※ニックネームは8文字以内で入力してほしいニャン。");
       return;
     }
 
     if (!passwordRegex.test(password)) {
-      setErrorMessage("※パスワードは半角英数字8~16文字で入力してくださいワン。");
+      setErrorMessage("※パスワードは半角英数字8~16文字で入力してほしいワン。");
       return;
     }
 
     if (password !== passwordConfirm) {
-      setErrorMessage("※パスワードが一致しませんニャン。");
+      setErrorMessage("※パスワードが一致しないニャン。");
       return;
     }
 
     if (comment.length > 100) {
-      setErrorMessage("※フリーコメントは100文字以内で入力してくださいワン。");
+      setErrorMessage("※フリーコメントは100文字以内で入力してほしいワン。");
       return;
     }
 
